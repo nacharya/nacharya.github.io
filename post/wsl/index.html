@@ -147,7 +147,7 @@
                 
                     <div class="info">
                         <em class="fas fa-calendar-day"></em>
-                        <span class="date">Thu, Dec 17, 2020</span>
+                        <span class="date">Mon, Jan 1, 0001</span>
                         <em class="fas fa-stopwatch"></em>
                         <span class="reading-time">2-minute read</span>
                     </div>
@@ -164,30 +164,30 @@
 </ul>
 <p><em><strong>Pathces</strong></em> : If you have Windows revisions 1903 or 1909 make sure you can install the 
 patches: <a href="https://support.microsoft.com/en-us/help/4566116/windows-10-update-kb4566116"> Windows Update KB4566116</a></p>
-<h2 id="1-wsl-has-to-be-enabled-">**1. WSL has to be enabled **</h2>
+<h2 id="1-wsl-has-to-be-enabled">1. WSL has to be enabled</h2>
 <p>Once the installation is complete, please enable the WSL using the following Powershell</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">dism.exe /online /enable-feature /featurename<span style="color:#960050;background-color:#1e0010">:</span>Microsoft-Windows-Subsystem-Linux /all /norestart
-</code></pre></div><h2 id="2-enable-virtual-machine-support-">**2. Enable Virtual Machine Support **</h2>
+</code></pre></div><h2 id="2-enable-virtual-machine-support">2. Enable Virtual Machine Support</h2>
 <p>Once you have a comouter with Hyper-V hardware support, enable the Virtual machine Support 
 in Windows 10 (1903 or 1909) with the following Powershell</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
-</code></pre></div><h2 id="3-wslv2-should-be-the-default-">**3. WSLv2 should be the default **</h2>
+</code></pre></div><h2 id="3-wslv2-should-be-the-default">3. WSLv2 should be the default</h2>
 <p>As of writing this document in Jan 2021, best version option to be made default in Windows 
 should be 2. Set it accordingly using Powershell</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">wsl --set-default-version 2
-</code></pre></div><h2 id="4-install-ubuntu-2004-">**4. Install Ubuntu 20.04 **</h2>
+</code></pre></div><h2 id="4-install-ubuntu-2004">4. Install Ubuntu 20.04</h2>
 <p>Linux distros are now available in the Microsoft Store App for Windows . Look for 
 <code>Ubuntu 20.04</code> and install it. Following link will also get you there</p>
 <p><a href="https://www.microsoft.com/en-gb/p/ubuntu-2004-lts/9n6svws3rx71"> Ubuntu 20.04 LTS in the Microsoft Store </a></p>
-<h2 id="-5-install-windows-terminal-">** 5. Install Windows Terminal **</h2>
+<h2 id="5-install-windows-terminal">5. Install Windows Terminal</h2>
 <p>Windows Terminal is also available in the Microsoft Store App. Following link will get you there</p>
 <p><a href="https://www.microsoft.com/en-gb/p/windows-terminal/9n0dx20hk701">Windows Terminal in the Microsoft Store</a></p>
-<h2 id="6--using-ubuntu-">**6 . Using Ubuntu **</h2>
+<h2 id="6-using-ubuntu">6. Using Ubuntu</h2>
 <p>Start the Windows Terminal Application. At the top bar of the Terminal right next to the <code>+</code> sign there is 
 anoher sign with <code>🠋</code>
 Select that and Choose <code>Ubuntu</code>.  It wil take you directly to a bash shell</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">user@mypc./mnt/c/home/user %
-</code></pre></div><h2 id="7-check-the-running-wsl-">**7. CHeck the running wsl **</h2>
+</code></pre></div><h2 id="7-check-the-running-wsl">7. CHeck the running wsl</h2>
 <p>Got back to the running terminal the using the following command to look at the current status 
 of the running WSLv2</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">C:/&gt; wsl -v -l 

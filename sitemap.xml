@@ -3,36 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nacharya.github.io/</loc>
-    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nacharya.github.io/post/</loc>
-    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nacharya.github.io/tags/</loc>
-    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nacharya.github.io/tags/ubuntu/</loc>
-    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nacharya.github.io/tags/wsl/</loc>
-    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nacharya.github.io/post/wsl/</loc>
-    <lastmod>2020-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nacharya.github.io/projects/</loc>
     <lastmod>2020-12-06T22:25:53-08:00</lastmod>
   </url>
@@ -45,6 +15,11 @@
   <url>
     <loc>https://nacharya.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nacharya.github.io/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -73,7 +48,17 @@
   </url>
   
   <url>
+    <loc>https://nacharya.github.io/post/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nacharya.github.io/categories/syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nacharya.github.io/tags/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -124,6 +109,18 @@
   
   <url>
     <loc>https://nacharya.github.io/tags/index/</loc>
+  </url>
+  
+  <url>
+    <loc>https://nacharya.github.io/tags/ubuntu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://nacharya.github.io/tags/wsl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://nacharya.github.io/post/wsl/</loc>
   </url>
   
 </urlset>
