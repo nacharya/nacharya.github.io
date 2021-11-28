@@ -8,6 +8,34 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nacharya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Research</title>
+      <link>https://nacharya.github.io/research/</link>
+      <pubDate>Sun, 28 Nov 2021 11:01:12 -0800</pubDate>
+      
+      <guid>https://nacharya.github.io/research/</guid>
+      <description>Research    Coming Soon !</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://nacharya.github.io/projects/</link>
+      <pubDate>Sun, 28 Nov 2021 10:57:49 -0800</pubDate>
+      
+      <guid>https://nacharya.github.io/projects/</guid>
+      <description> S3 Data Access: edge_access Financial Predictions using AI/ML wfc Empowering students with Technology Eblackboard  Code     Languages: Go, Python3, TypeScript, C, C++, F# Frameworks: NodeJS, TensorFlow, Jupyter,  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://nacharya.github.io/about/</link>
+      <pubDate>Sat, 27 Nov 2021 18:19:10 -0800</pubDate>
+      
+      <guid>https://nacharya.github.io/about/</guid>
+      <description>Data, Processing and Learning    Lots of data is easy to collect. It has to be persisted somewhere. Data has to be processed to find out what is relevant and what is not. If irrelevant data is thrown away, it reduces your cost to store it. Data come it many many different formats and it must be processed to extract only what we care about.
+I am fond of data as it is persisted , mined and learned from.</description>
+    </item>
+    
+    <item>
       <title>WSLv2 and Windows 10 Pro</title>
       <link>https://nacharya.github.io/posts/wsl/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
