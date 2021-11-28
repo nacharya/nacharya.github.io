@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Nabin Acharya</title>
+    <link>https://nacharya.github.io/posts/</link>
+    <description>Recent content in Posts on Nabin Acharya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Nov 2021 18:12:03 -0800</lastBuildDate><atom:link href="https://nacharya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testpage</title>
+      <link>https://nacharya.github.io/posts/testpage/</link>
+      <pubDate>Sat, 27 Nov 2021 18:12:03 -0800</pubDate>
+      
+      <guid>https://nacharya.github.io/posts/testpage/</guid>
+      <description>Sample    THis is a sample test page</description>
+    </item>
+    
+  </channel>
+</rss>
