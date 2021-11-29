@@ -6,7 +6,7 @@
     <description>Recent content on Nabin Acharya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nacharya.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Nov 2021 14:21:32 -0800</lastBuildDate><atom:link href="https://nacharya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Research</title>
       <link>https://nacharya.github.io/research/</link>
@@ -33,6 +33,17 @@
       <guid>https://nacharya.github.io/about/</guid>
       <description>Data, Processing and Learning    Lots of data is easy to collect. It has to be persisted somewhere. Data has to be processed to find out what is relevant and what is not. If irrelevant data is thrown away, it reduces your cost to store it. Data come it many many different formats and it must be processed to extract only what we care about.
 I am fond of data as it is persisted , mined and learned from.</description>
+    </item>
+    
+    <item>
+      <title>Python 3.10</title>
+      <link>https://nacharya.github.io/posts/p310/</link>
+      <pubDate>Sat, 27 Nov 2021 14:21:32 -0800</pubDate>
+      
+      <guid>https://nacharya.github.io/posts/p310/</guid>
+      <description>Python 3.10 is here    Python 3.10 is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)
+Structural Mattern Matching    In the traditional programming languages, this is usually referred to as the switch ...case statements. Although syntactically it looks like a switch ... case statement, it is a lot more than that.
+It allows you to detect and deconstruct different structures the data is defined as, and lets you use patterns of your definition.</description>
     </item>
     
     <item>
