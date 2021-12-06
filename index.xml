@@ -6,7 +6,7 @@
     <description>Recent content on Nabin Acharya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Nov 2021 14:21:32 -0800</lastBuildDate><atom:link href="https://nacharya.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Nov 2021 15:30:09 -0800</lastBuildDate><atom:link href="https://nacharya.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Research</title>
       <link>https://nacharya.github.io/research/</link>
@@ -36,6 +36,17 @@ I am fond of data as it is persisted , mined and learned from.</description>
     </item>
     
     <item>
+      <title>Data Analytics Links</title>
+      <link>https://nacharya.github.io/posts/data-analytics/</link>
+      <pubDate>Sat, 27 Nov 2021 15:30:09 -0800</pubDate>
+      
+      <guid>https://nacharya.github.io/posts/data-analytics/</guid>
+      <description>Some of the most useful courses online      The Data Science Course 2021: Complete Data Science Bootcamp. The course is very precise and well organized. They have a good combination of theory with good practical examples tht are relevent today
+  Principles, Statistical and Computational Tools for Reproducible Data Science Harvard also has a very nice Master&amp;rsquo;s program in Data Science
+  Berkeley Online Data Analytics Boot Camp : Berkeley also has a one year Master&amp;rsquo;s program on Analytics and Data Science.</description>
+    </item>
+    
+    <item>
       <title>Python 3.10</title>
       <link>https://nacharya.github.io/posts/p310/</link>
       <pubDate>Sat, 27 Nov 2021 14:21:32 -0800</pubDate>
@@ -57,7 +68,7 @@ It allows you to detect and deconstruct different structures the data is defined
     </item>
     
     <item>
-      <title>Markdown Syntax Guide</title>
+      <title>Markdown Syntax Guide for writing markdown content</title>
       <link>https://nacharya.github.io/posts/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -66,7 +77,7 @@ It allows you to detect and deconstruct different structures the data is defined
     </item>
     
     <item>
-      <title>Rich Content</title>
+      <title>Rich Content within Markdown using Hugo shortcodes</title>
       <link>https://nacharya.github.io/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -84,7 +95,7 @@ It allows you to detect and deconstruct different structures the data is defined
     </item>
     
     <item>
-      <title>Math Typesetting</title>
+      <title>Math Typesetting for Math Equations in Markdown</title>
       <link>https://nacharya.github.io/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -93,7 +104,7 @@ It allows you to detect and deconstruct different structures the data is defined
     </item>
     
     <item>
-      <title>Emoji Support</title>
+      <title>Emoji Support using Hugo shortcodes</title>
       <link>https://nacharya.github.io/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
