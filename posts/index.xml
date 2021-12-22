@@ -6,7 +6,21 @@
     <description>Recent content in Posts on Nabin Acharya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Nov 2021 15:30:09 -0800</lastBuildDate><atom:link href="https://nacharya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Dec 2021 14:37:03 -0800</lastBuildDate><atom:link href="https://nacharya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generics in the Go Language</title>
+      <link>https://nacharya.github.io/posts/genericsgo/</link>
+      <pubDate>Tue, 21 Dec 2021 14:37:03 -0800</pubDate>
+      
+      <guid>https://nacharya.github.io/posts/genericsgo/</guid>
+      <description>Generics in Go    Some well known documents from the past
+  Type parameters proposal
+  Why Generics?
+  The Next Steps
+  It is December 2021 and &amp;hellip;.we have Go 1.18 beta 1 available. The Golang team is hard at work on Golang 1.18, which will be released in February 2022, and it looks like it’s going to be a big one.
+Once upon a time in C++, when templates were introduced, lots of templates with amazing capabilities came into light, then came STL and standardized most of it to make things extremely powerful and usable.</description>
+    </item>
+    
     <item>
       <title>Data Analytics Links</title>
       <link>https://nacharya.github.io/posts/data-analytics/</link>
