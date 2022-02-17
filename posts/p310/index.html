@@ -1,172 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="Nabin Acharya">
-    <meta name="description" content="Python 3.10 is here    Python 3.10 is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="en">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Nabin Acharya">
+<meta name=description content="Python 3.10 is here    Python 3.10 is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)
 Structural Mattern Matching    In the traditional programming languages, this is usually referred to as the switch ...case statements. Although syntactically it looks like a switch ... case statement, it is a lot more than that.
 It allows you to detect and deconstruct different structures the data is defined as, and lets you use patterns of your definition.">
-    <meta name="keywords" content="">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Python 3.10"/>
-<meta name="twitter:description" content="Python 3.10 is here    Python 3.10 is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)
+<meta name=keywords content>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Python 3.10">
+<meta name=twitter:description content="Python 3.10 is here    Python 3.10 is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)
 Structural Mattern Matching    In the traditional programming languages, this is usually referred to as the switch ...case statements. Although syntactically it looks like a switch ... case statement, it is a lot more than that.
-It allows you to detect and deconstruct different structures the data is defined as, and lets you use patterns of your definition."/>
-
-    <meta property="og:title" content="Python 3.10" />
+It allows you to detect and deconstruct different structures the data is defined as, and lets you use patterns of your definition.">
+<meta property="og:title" content="Python 3.10">
 <meta property="og:description" content="Python 3.10 is here    Python 3.10 is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)
 Structural Mattern Matching    In the traditional programming languages, this is usually referred to as the switch ...case statements. Although syntactically it looks like a switch ... case statement, it is a lot more than that.
-It allows you to detect and deconstruct different structures the data is defined as, and lets you use patterns of your definition." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://nacharya.github.io/posts/p310/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-11-27T14:21:32-08:00" />
-<meta property="article:modified_time" content="2021-11-27T14:21:32-08:00" />
-
-
-
-    <title>
-  Python 3.10 · Nabin Acharya
+It allows you to detect and deconstruct different structures the data is defined as, and lets you use patterns of your definition.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nacharya.github.io/posts/p310/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-11-27T14:21:32-08:00">
+<meta property="article:modified_time" content="2021-11-27T14:21:32-08:00">
+<title>
+Python 3.10 · Nabin Acharya
 </title>
-
-    
-      <link rel="canonical" href="https://nacharya.github.io/posts/p310/">
-    
-
-    <link rel="preload" href="https://nacharya.github.io/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="https://nacharya.github.io/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="https://nacharya.github.io/css/coder-dark.min.ccbbada2e264e4fdbf9b2181cccc2cdb289a63dc9520a1e96ac2b9a45778df29.css" integrity="sha256-zLutouJk5P2/myGBzMws2yiaY9yVIKHpasK5pFd43yk=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="https://nacharya.github.io/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://nacharya.github.io/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="https://nacharya.github.io/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nacharya.github.io/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.89.4" />
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
+<link rel=canonical href=https://nacharya.github.io/posts/p310/>
+<link rel=preload href="https://nacharya.github.io/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=https://nacharya.github.io/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=https://nacharya.github.io/css/coder-dark.min.ccbbada2e264e4fdbf9b2181cccc2cdb289a63dc9520a1e96ac2b9a45778df29.css integrity="sha256-zLutouJk5P2/myGBzMws2yiaY9yVIKHpasK5pFd43yk=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=https://nacharya.github.io/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=https://nacharya.github.io/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=https://nacharya.github.io/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://nacharya.github.io/images/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.92.2">
+</head>
+<body class="preload-transitions colorscheme-dark">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
 </div>
-
-
-    <main class="wrapper">
-      <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="https://nacharya.github.io/">
-      Nabin Acharya
-    </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="https://nacharya.github.io/about/">About</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="https://nacharya.github.io/research/">Research</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="https://nacharya.github.io/posts/">Blog</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="https://nacharya.github.io/projects/">Projects</a>
-            </li>
-          
-        
-        
-      </ul>
-    
-  </section>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=https://nacharya.github.io/>
+Nabin Acharya
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=https://nacharya.github.io/about/>About</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://nacharya.github.io/articles/>Articles</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://nacharya.github.io/posts/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://nacharya.github.io/projects/>Projects</a>
+</li>
+</ul>
+</section>
 </nav>
-
-
-      <div class="content">
-        
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="https://nacharya.github.io/posts/p310/">
-              Python 3.10
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime='2021-11-27T14:21:32-08:00'>
-                November 27, 2021
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              3-minute read
-            </span>
-          </div>
-          
-          
-          
-        </div>
-      </header>
-
-      <div>
-        
-        <h2 id="python-310-is-here">
-  Python 3.10 is here
-  <a class="heading-link" href="#python-310-is-here">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://nacharya.github.io/posts/p310/>
+Python 3.10
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2021-11-27T14:21:32-08:00>
+November 27, 2021
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+3-minute read
+</span>
+</div>
+</div>
+</header>
+<div>
+<h2 id=python-310-is-here>
+Python 3.10 is here
+<a class=heading-link href=#python-310-is-here>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
 </h2>
-<p><a href="https://www.python.org/downloads/release/python-3100/">Python 3.10</a> is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)</p>
-<h3 id="__structural-mattern-matching__">
-  <strong>Structural Mattern Matching</strong>
-  <a class="heading-link" href="#__structural-mattern-matching__">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<p><a href=https://www.python.org/downloads/release/python-3100/>Python 3.10</a> is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)</p>
+<h3 id=__structural-mattern-matching__>
+<strong>Structural Mattern Matching</strong>
+<a class=heading-link href=#__structural-mattern-matching__>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
 </h3>
 <p>In the traditional programming languages, this is usually referred to as the <code>switch ...case</code>
 statements. Although syntactically it looks like a <code>switch ... case</code> statement, it is a lot more than that.</p>
@@ -174,157 +113,107 @@ statements. Although syntactically it looks like a <code>switch ... case</code> 
 use patterns of your definition. Standard pattern matching is very literal and let&rsquo;s you define explicitly. All in all, it adds good power to the language</p>
 <p>Relevant Documents:</p>
 <ul>
-<li><a href="https://www.python.org/dev/peps/pep-0634">Specificaiton - PEP 634</a></li>
-<li><a href="https://www.python.org/dev/peps/pep-0635">Motivation &amp; Rationale - PEP 635</a></li>
-<li><a href="https://www.python.org/dev/peps/pep-0636">Tutorial - PEP 636</a></li>
+<li><a href=https://www.python.org/dev/peps/pep-0634>Specificaiton - PEP 634</a></li>
+<li><a href=https://www.python.org/dev/peps/pep-0635>Motivation & Rationale - PEP 635</a></li>
+<li><a href=https://www.python.org/dev/peps/pep-0636>Tutorial - PEP 636</a></li>
 </ul>
 <p>Now let&rsquo;s take a look at Python Type checking using this structure. Normally, Type checking is not needed in Python, but for traditional language folks, this is a useful feature.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">match value:
-    case <span style="color:#b58900">str</span>():  <span style="color:#586e75"># Handle strings first for performance reasons.</span>
-        <span style="color:#719e07">return</span> value
-    case <span style="color:#b58900">bool</span>():  <span style="color:#586e75"># Make sure booleans don&#39;t get treated as numbers</span>
-        <span style="color:#719e07">return</span> <span style="color:#b58900">str</span>(value)
-    case decimal<span style="color:#719e07">.</span>Decimal() <span style="color:#719e07">|</span> <span style="color:#b58900">float</span>() <span style="color:#719e07">|</span> <span style="color:#b58900">int</span>():
-        <span style="color:#719e07">if</span> use_l10n <span style="color:#719e07">is</span> <span style="color:#cb4b16">False</span>:
-            <span style="color:#719e07">return</span> <span style="color:#b58900">str</span>(value)
-        <span style="color:#719e07">return</span> number_format(value, use_l10n<span style="color:#719e07">=</span>use_l10n)
-    case datetime<span style="color:#719e07">.</span>datetime():
-        <span style="color:#719e07">return</span> date_format(value, <span style="color:#2aa198">&#39;DATETIME_FORMAT&#39;</span>, use_l10n<span style="color:#719e07">=</span>use_l10n)
-    case datetime<span style="color:#719e07">.</span>date():
-        <span style="color:#719e07">return</span> date_format(value, use_l10n<span style="color:#719e07">=</span>use_l10n)
-    case datetime<span style="color:#719e07">.</span>time():
-        <span style="color:#719e07">return</span> time_format(value, <span style="color:#2aa198">&#39;TIME_FORMAT&#39;</span>, use_l10n<span style="color:#719e07">=</span>use_l10n)
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>match value:
+    case <span style=color:#b58900>str</span>():  <span style=color:#586e75># Handle strings first for performance reasons.</span>
+        <span style=color:#719e07>return</span> value
+    case <span style=color:#b58900>bool</span>():  <span style=color:#586e75># Make sure booleans don&#39;t get treated as numbers</span>
+        <span style=color:#719e07>return</span> <span style=color:#b58900>str</span>(value)
+    case decimal<span style=color:#719e07>.</span>Decimal() <span style=color:#719e07>|</span> <span style=color:#b58900>float</span>() <span style=color:#719e07>|</span> <span style=color:#b58900>int</span>():
+        <span style=color:#719e07>if</span> use_l10n <span style=color:#719e07>is</span> <span style=color:#cb4b16>False</span>:
+            <span style=color:#719e07>return</span> <span style=color:#b58900>str</span>(value)
+        <span style=color:#719e07>return</span> number_format(value, use_l10n<span style=color:#719e07>=</span>use_l10n)
+    case datetime<span style=color:#719e07>.</span>datetime():
+        <span style=color:#719e07>return</span> date_format(value, <span style=color:#2aa198>&#39;DATETIME_FORMAT&#39;</span>, use_l10n<span style=color:#719e07>=</span>use_l10n)
+    case datetime<span style=color:#719e07>.</span>date():
+        <span style=color:#719e07>return</span> date_format(value, use_l10n<span style=color:#719e07>=</span>use_l10n)
+    case datetime<span style=color:#719e07>.</span>time():
+        <span style=color:#719e07>return</span> time_format(value, <span style=color:#2aa198>&#39;TIME_FORMAT&#39;</span>, use_l10n<span style=color:#719e07>=</span>use_l10n)
     case _:
-        <span style="color:#719e07">return</span> value
-</code></pre></div><h3 id="__better-error-messages__">
-  <strong>Better Error Messages</strong>
-  <a class="heading-link" href="#__better-error-messages__">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+        <span style=color:#719e07>return</span> value
+</code></pre></div><h3 id=__better-error-messages__>
+<strong>Better Error Messages</strong>
+<a class=heading-link href=#__better-error-messages__>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
 </h3>
-<p>Much of this <a href="https://docs.python.org/3.10/whatsnew/3.10.html#better-error-messages">Documentation</a> describes the precision of the error messages. There are a lot of cases when debugging a large code base , one encounters errors that makes you wonder and guess the reasons behind the error messages.
+<p>Much of this <a href=https://docs.python.org/3.10/whatsnew/3.10.html#better-error-messages>Documentation</a> describes the precision of the error messages. There are a lot of cases when debugging a large code base , one encounters errors that makes you wonder and guess the reasons behind the error messages.
 The classic language confusion of the message <code>Syntax Error</code> is one of them .</p>
 <p>Here is one example of a small variable definition error. A simple commonly occurring error but the messages are a lot more explicit.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-CountProjectOwners <span style="color:#719e07">=</span> <span style="color:#2aa198">5</span>
-<span style="color:#b58900">print</span>(CountProject)
-<span style="color:#719e07">&gt;</span> <span style="color:#cb4b16">NameError</span>: name <span style="color:#2aa198">&#39;CountProject&#39;</span> <span style="color:#719e07">is</span> <span style="color:#719e07">not</span> defined<span style="color:#719e07">.</span> Did you mean: CountProjectOwners ?
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+CountProjectOwners <span style=color:#719e07>=</span> <span style=color:#2aa198>5</span>
+<span style=color:#b58900>print</span>(CountProject)
+<span style=color:#719e07>&gt;</span> <span style=color:#cb4b16>NameError</span>: name <span style=color:#2aa198>&#39;CountProject&#39;</span> <span style=color:#719e07>is</span> <span style=color:#719e07>not</span> defined<span style=color:#719e07>.</span> Did you mean: CountProjectOwners ?
 
 </code></pre></div><p>Now let&rsquo;s look at one common scenatio of forgetting to write &ldquo;:&rdquo;</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">if</span> age <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">21</span>
-    <span style="color:#b58900">print</span>(<span style="color:#2aa198">&#34;Age is greater than 21&#34;</span>)
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#719e07>if</span> age <span style=color:#719e07>&gt;</span> <span style=color:#2aa198>21</span>
+    <span style=color:#b58900>print</span>(<span style=color:#2aa198>&#34;Age is greater than 21&#34;</span>)
 </code></pre></div><p>Now let&rsquo;s run this code in 3.10 and see</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% python3.10 age.py
-<span style="color:#719e07">if</span> age &gt; <span style="color:#2aa198">21</span>    
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>% python3.10 age.py
+<span style=color:#719e07>if</span> age &gt; <span style=color:#2aa198>21</span>    
          ^
-SyntaxError: expected <span style="color:#2aa198">&#39;:&#39;</span>
-</code></pre></div><h3 id="__parenthesized-context-managers__">
-  <strong>Parenthesized Context Managers</strong>
-  <a class="heading-link" href="#__parenthesized-context-managers__">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+SyntaxError: expected <span style=color:#2aa198>&#39;:&#39;</span>
+</code></pre></div><h3 id=__parenthesized-context-managers__>
+<strong>Parenthesized Context Managers</strong>
+<a class=heading-link href=#__parenthesized-context-managers__>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
 </h3>
 <p>With this feature, it allows multiple I/O streams statements to be combined in a single statement of <code>with</code>. e.g.</p>
-<p>Say , for example, we had a line like &hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">with</span> <span style="color:#b58900">open</span>(<span style="color:#2aa198">&#39;foo1.txt&#39;</span>, <span style="color:#2aa198">&#39;r&#39;</span>) <span style="color:#719e07">as</span> fooin, <span style="color:#b58900">open</span>(<span style="color:#2aa198">&#39;foo2.txt&#39;</span>, <span style="color:#2aa198">&#39;w&#39;</span>) <span style="color:#719e07">as</span> fooout:
-    foout<span style="color:#719e07">.</span>write(fooin<span style="color:#719e07">.</span>read())
+<p>Say , for example, we had a line like &mldr;</p>
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#719e07>with</span> <span style=color:#b58900>open</span>(<span style=color:#2aa198>&#39;foo1.txt&#39;</span>, <span style=color:#2aa198>&#39;r&#39;</span>) <span style=color:#719e07>as</span> fooin, <span style=color:#b58900>open</span>(<span style=color:#2aa198>&#39;foo2.txt&#39;</span>, <span style=color:#2aa198>&#39;w&#39;</span>) <span style=color:#719e07>as</span> fooout:
+    foout<span style=color:#719e07>.</span>write(fooin<span style=color:#719e07>.</span>read())
 </code></pre></div><p>If this line is too long, we can split it using the traditional approach of using backslash <code>\</code>
 e.g.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">with</span> <span style="color:#b58900">open</span>(<span style="color:#2aa198">&#39;foo1.txt&#39;</span>, <span style="color:#2aa198">&#39;r&#39;</span>) <span style="color:#719e07">as</span> fooin, \
-     <span style="color:#b58900">open</span>(<span style="color:#2aa198">&#39;foo2.txt&#39;</span>, <span style="color:#2aa198">&#39;w&#39;</span>) <span style="color:#719e07">as</span> fooout:
-    fooout<span style="color:#719e07">.</span>write(fooin<span style="color:#719e07">.</span>read())
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#719e07>with</span> <span style=color:#b58900>open</span>(<span style=color:#2aa198>&#39;foo1.txt&#39;</span>, <span style=color:#2aa198>&#39;r&#39;</span>) <span style=color:#719e07>as</span> fooin, \
+     <span style=color:#b58900>open</span>(<span style=color:#2aa198>&#39;foo2.txt&#39;</span>, <span style=color:#2aa198>&#39;w&#39;</span>) <span style=color:#719e07>as</span> fooout:
+    fooout<span style=color:#719e07>.</span>write(fooin<span style=color:#719e07>.</span>read())
 </code></pre></div><p>With this new feature, the line can be split across multiple lines and kept within a pair of
 parentheses. e.g.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">with</span> (<span style="color:#b58900">open</span>(<span style="color:#2aa198">&#39;foo1.txt&#39;</span>, <span style="color:#2aa198">&#39;r&#39;</span>) <span style="color:#719e07">as</span> fooin,
-      <span style="color:#b58900">open</span>(<span style="color:#2aa198">&#39;foo2.txt&#39;</span>, <span style="color:#2aa198">&#39;w&#39;</span>) <span style="color:#719e07">as</span> fooout):
-    fooout<span style="color:#719e07">.</span>write(fooin<span style="color:#719e07">.</span>read())
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#719e07>with</span> (<span style=color:#b58900>open</span>(<span style=color:#2aa198>&#39;foo1.txt&#39;</span>, <span style=color:#2aa198>&#39;r&#39;</span>) <span style=color:#719e07>as</span> fooin,
+      <span style=color:#b58900>open</span>(<span style=color:#2aa198>&#39;foo2.txt&#39;</span>, <span style=color:#2aa198>&#39;w&#39;</span>) <span style=color:#719e07>as</span> fooout):
+    fooout<span style=color:#719e07>.</span>write(fooin<span style=color:#719e07>.</span>read())
 </code></pre></div><p>Simple, but makes the code readable and clean.</p>
-<h3 id="__type-unions__">
-  <strong>Type Unions</strong>
-  <a class="heading-link" href="#__type-unions__">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<h3 id=__type-unions__>
+<strong>Type Unions</strong>
+<a class=heading-link href=#__type-unions__>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
 </h3>
 <p>There are a lot of cases where the data types itself are not precisely known but the
-function can complete execution  within certain boundaries. e.g.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">def</span> <span style="color:#268bd2">f</span>(x: <span style="color:#b58900">int</span> <span style="color:#719e07">|</span> <span style="color:#b58900">float</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">float</span>:    <span style="color:#719e07">return</span> x <span style="color:#719e07">*</span> <span style="color:#2aa198">3.142</span>f(<span style="color:#2aa198">1</span>)  
+function can complete execution within certain boundaries. e.g.</p>
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#719e07>def</span> <span style=color:#268bd2>f</span>(x: <span style=color:#b58900>int</span> <span style=color:#719e07>|</span> <span style=color:#b58900>float</span>) <span style=color:#719e07>-&gt;</span> <span style=color:#b58900>float</span>:    <span style=color:#719e07>return</span> x <span style=color:#719e07>*</span> <span style=color:#2aa198>3.142</span>f(<span style=color:#2aa198>1</span>)  
 </code></pre></div><p>this function will execute for both <code>int</code> and <code>float</code> as arguments, but will fail for <code>str</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-f(<span style="color:#2aa198">3</span>) <span style="color:#586e75"># pass</span>
-f(<span style="color:#2aa198">5.5</span>) <span style="color:#586e75"># pass</span>
-f(<span style="color:#2aa198">&#34;hello&#34;</span>)  <span style="color:#586e75"># fail</span>
+<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+f(<span style=color:#2aa198>3</span>) <span style=color:#586e75># pass</span>
+f(<span style=color:#2aa198>5.5</span>) <span style=color:#586e75># pass</span>
+f(<span style=color:#2aa198>&#34;hello&#34;</span>)  <span style=color:#586e75># fail</span>
 
 </code></pre></div>
-      </div>
-
-
-      <footer>
-        
-
-
-        
-        
-        
-      </footer>
-    </article>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
-    integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
-  
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
-    integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
-    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-    onload="renderMathInElement(document.body,
-      {
-        delimiters: [
-          {left: '$$', right: '$$', display:true},
-          {left: '$', right: '$', display:false},
-          {left: '\\(', right: '\\)', display: false},
-          {left: '\\[', right: '\\]', display: true}
-        ]
-      }
-    );"></script>
-  </section>
-
-      </div>
-
-      <footer class="footer">
-  <section class="container">
-    ©
-    
-      2019 -
-    
-    2021
-     Nabin Acharya 
-    ·
-    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    
-  </section>
+</div>
+<footer>
 </footer>
-
-    </main>
-
-    
-      
-      <script src="https://nacharya.github.io/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
-
+</article>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1},{left:'\\(',right:'\\)',display:!1},{left:'\\[',right:'\\]',display:!0}]})"></script>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+©
+2019 -
+2022
+Nabin Acharya
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=https://nacharya.github.io/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script>
+</body>
 </html>
