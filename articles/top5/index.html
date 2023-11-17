@@ -14,7 +14,7 @@ Presentation Layer Business Layer Persistence Layer Database Layer A very widely
 <a class=heading-link href=#top-5-software-architectural-patterns><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Software Architectures are the foundations to Software systems. Choice and correct use of
 an appropriate pattern is really important when building large software systems</p><h3 id=1-layered-architecture>1. Layered Architecture
 <a class=heading-link href=#1-layered-architecture><i class="fa fa-link" aria-hidden=true></i></a></h3><p>A system is separated into sub-systems as distictictly different layers that communicates
-to each other layer it is adjacent to.</p><p>A very common example of Architecture is the following list of layers</p><ul><li>Presentation Layer</li><li>Business Layer</li><li>Persistence Layer</li><li>Database Layer</li></ul><p><img src=layered_pic.png alt></p><p>A very widely used pattern that includes UI patterns like MVP as it allows for the
+to each other layer it is adjacent to.</p><p>A very common example of Architecture is the following list of layers</p><ul><li>Presentation Layer</li><li>Business Layer</li><li>Persistence Layer</li><li>Database Layer</li></ul><p><img src=https://nacharya.github.io/layered_pic.png alt></p><p>A very widely used pattern that includes UI patterns like MVP as it allows for the
 separation of Data Layer, Business Logic layer and User Presentation (UI) layers
 Each layer having a distinct responsibility makes it so the changes in one layer
 will only impact the adjacent layer and not all the components of the system</p><p>Iterative development of each layer warrants the compatibility changes with adjacent
@@ -22,7 +22,7 @@ layers</p><h3 id=event-driven-architecture>Event Driven Architecture
 <a class=heading-link href=#event-driven-architecture><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Production and consumption of <code>events</code> between losely coupled softare components.
 The software components that produce and consume events can be very diverse but they
 can still function incredibly well for high-traffic scalable systems.</p><p>It also allows for minimizing the dependencies to the <code>event</code> structures within certain
-categories ( <code>topic</code> ) only.</p><p><img src=events_pic.png alt></p><p>One commonly used and discussed widely pattern is the CQRS pattern. This patterns allows for the
+categories ( <code>topic</code> ) only.</p><p><img src=https://nacharya.github.io/events_pic.png alt></p><p>One commonly used and discussed widely pattern is the CQRS pattern. This patterns allows for the
 separation of write-operations ( commands ) and read-operations ( queries ).
 In GraphQL terminology, read-operations are <code>Queries</code> and write-operations are <code>Mutations</code></p><p>One of the most important middleware here is the MessageBroker or the Pub-Sub system that all
 software systems communicate through. Most commonly used ones are:
@@ -31,16 +31,16 @@ and most commonly used protocols are:
 MQTT, AMQP and STOMP</p><h3 id=microservices-architecture>Microservices Architecture
 <a class=heading-link href=#microservices-architecture><i class="fa fa-link" aria-hidden=true></i></a></h3><p>In this pattern , software application is developed as a collection of services.
 In this model, It provides the framework to develop, deploy, and maintain microservices
-architecture diagrams and services independently.</p><p><img src=microservices_pic.png alt></p><p>Much of the structures around Cloud Engineering have very good automation for building
+architecture diagrams and services independently.</p><p><img src=https://nacharya.github.io/microservices_pic.png alt></p><p>Much of the structures around Cloud Engineering have very good automation for building
 and deploying microservices to live systems withot any downtime.</p><p>As a modern application pattern, this is certainly one of the best patterns that
 we use these days ( 2023 )</p><h3 id=microkernel-architecture>Microkernel Architecture
 <a class=heading-link href=#microkernel-architecture><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Here we separate the main part of the software system into a <code>core</code> component
 and surround it with components we call <code>Plug-in</code> .
 All plugins are dependent on the core itself but isolates the dependencies across
-plugins.</p><p><img src=microkernel_pic.png alt></p><p>Software lifecycle of the <code>core</code> and the <code>Plug-in</code> can be very different here. e.g. In the traditional OS, the device drivers are like <code>Plug-in</code> and can have their own software lifecycle.</p><h3 id=monolithic-architecture>Monolithic Architecture
+plugins.</p><p><img src=https://nacharya.github.io/microkernel_pic.png alt></p><p>Software lifecycle of the <code>core</code> and the <code>Plug-in</code> can be very different here. e.g. In the traditional OS, the device drivers are like <code>Plug-in</code> and can have their own software lifecycle.</p><h3 id=monolithic-architecture>Monolithic Architecture
 <a class=heading-link href=#monolithic-architecture><i class="fa fa-link" aria-hidden=true></i></a></h3><p>This pattern is the traditional model of designing sofftware applications. In this model
 softwae application is developed as a single unit, one single codebase but with many different
-subcomponents organized in the same codebase.</p><p><img src=monolithic_pic.png alt></p><p>All the software components in a monolithic system are interdependent
+subcomponents organized in the same codebase.</p><p><img src=https://nacharya.github.io/monolithic_pic.png alt></p><p>All the software components in a monolithic system are interdependent
 Monolitic pattern based systems are geared towards high-performance, simplicity and
 a broad support for underlying hardware systems that it is dependent on.</p></article></section><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload='renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})'></script></div><footer class=footer><section class=container>©
 2019 -
