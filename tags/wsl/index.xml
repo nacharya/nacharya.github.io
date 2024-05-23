@@ -1,23 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>WSL on N Acharya</title>
-    <link>http://localhost:1313/tags/wsl/</link>
-    <description>Recent content in WSL on N Acharya</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>WSLv2 and Windows 10 Pro</title>
-      <link>http://localhost:1313/posts/wsl/</link>
-      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/wsl/</guid>
-      
-      <description>Installing WSLv2 on Windows and using Linux natively on Windows Pre-requisites Windows 10 May 2020 (2004) or Windows 10 May 2019 (1903) or Windows 10 November 2019 (1909) or later Computer with Hyper-V support for virtualization Pathces : If you have Windows revisions 1903 or 1909 make sure you can install the patches: Windows Update KB4566116
-1. WSL has to be enabled Once the installation is complete, please enable the WSL using the following Powershell</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WSL on N Acharya</title><link>https://nacharya.github.io/tags/wsl/</link><description>Recent content in WSL on N Acharya</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nacharya.github.io/tags/wsl/index.xml" rel="self" type="application/rss+xml"/><item><title>WSLv2 and Windows 10 Pro</title><link>https://nacharya.github.io/posts/wsl/</link><pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate><guid>https://nacharya.github.io/posts/wsl/</guid><description>Installing WSLv2 on Windows and using Linux natively on Windows Pre-requisites Windows 10 May 2020 (2004) or Windows 10 May 2019 (1903) or Windows 10 November 2019 (1909) or later Computer with Hyper-V support for virtualization Pathces : If you have Windows revisions 1903 or 1909 make sure you can install the patches: Windows Update KB4566116
+1. WSL has to be enabled Once the installation is complete, please enable the WSL using the following Powershell</description></item></channel></rss>
