@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Nabin Acharya">
+    <meta name="description" content="Generics in Go Some well known documents from the past
+Type parameters proposal
+Why Generics?
+The Next Steps
+It is December 2021 and &hellip;.we have Go 1.18 beta 1 available. The Golang team is hard at work on Golang 1.18, which will be released in February 2022, and it looks like it’s going to be a big one.
+Once upon a time in C&#43;&#43;, when templates were introduced, lots of templates with amazing capabilities came into light, then came STL and standardized most of it to make things extremely powerful and usable.">
+    <meta name="keywords" content="iiot, data, architecture, payments, ai, llm">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Generics in the Go Language"/>
+<meta name="twitter:description" content="Generics in Go Some well known documents from the past
+Type parameters proposal
+Why Generics?
+The Next Steps
+It is December 2021 and &hellip;.we have Go 1.18 beta 1 available. The Golang team is hard at work on Golang 1.18, which will be released in February 2022, and it looks like it’s going to be a big one.
+Once upon a time in C&#43;&#43;, when templates were introduced, lots of templates with amazing capabilities came into light, then came STL and standardized most of it to make things extremely powerful and usable."/>
+
+    <meta property="og:title" content="Generics in the Go Language" />
+<meta property="og:description" content="Generics in Go Some well known documents from the past
+Type parameters proposal
+Why Generics?
+The Next Steps
+It is December 2021 and &hellip;.we have Go 1.18 beta 1 available. The Golang team is hard at work on Golang 1.18, which will be released in February 2022, and it looks like it’s going to be a big one.
+Once upon a time in C&#43;&#43;, when templates were introduced, lots of templates with amazing capabilities came into light, then came STL and standardized most of it to make things extremely powerful and usable." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/genericsgo/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-21T14:37:03-08:00" />
+<meta property="article:modified_time" content="2021-12-21T14:37:03-08:00" />
+
+
+
+
+    <title>
+  Generics in the Go Language · N Acharya
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/genericsgo/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="http://localhost:1313/css/coder-dark.css" media="screen">
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-dark">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      N Acharya
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/articles/">Articles</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/projects/">Projects</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/genericsgo/">
+              Generics in the Go Language
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-12-21T14:37:03-08:00'>
+                December 21, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="generics-in-go">
+  Generics in Go
+  <a class="heading-link" href="#generics-in-go">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Some well known documents from the past</p>
+<ul>
+<li>
+<p><a href="https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md">Type parameters proposal</a></p>
+</li>
+<li>
+<p><a href="https://go.dev/blog/why-generics">Why Generics?</a></p>
+</li>
+<li>
+<p><a href="https://go.dev/blog/generics-next-step">The Next Steps</a></p>
+</li>
+</ul>
+<p>It is December 2021 and &hellip;.we have <a href="https://go.dev/blog/go1.18beta1">Go 1.18 beta 1</a> available.
+The Golang team is hard at work on Golang 1.18, which will be released in February 2022, and it looks like it’s going to be a big one.</p>
+<p>Once upon a time in C++, when templates were introduced, lots of templates with amazing capabilities came into light, then came STL and standardized most of it to make things extremely powerful and usable.</p>
+<p>Hoping Generics will play the same with <code>go</code>. It is too early to tell so let&rsquo;s wait and see.</p>
+<h3 id="playing-with-generics-in-go">
+  Playing with Generics in Go
+  <a class="heading-link" href="#playing-with-generics-in-go">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>It is always fun to look at simple cases of generics and understand how to utilize the generics.
+Here we start defining a collection of of some <code>type</code> of elements and call it a type <code>MArray</code> ( My Array )</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#268bd2">type</span> <span style="color:#268bd2">MArray</span>(<span style="color:#268bd2">type</span> T) <span style="color:#268bd2">struct</span> {
+</span></span><span style="display:flex;"><span>    things []T
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>So <code>MArray</code> is a collection of things of <code>type</code> T. Here &ldquo;T&rdquo; is the completely generic <code>type</code></p>
+<p>Let&rsquo;s say here is a list of methods we want to write on this generic <code>Marray</code></p>
+<ul>
+<li><!-- raw HTML omitted --> PushBack <!-- raw HTML omitted --> : Add a things into the Array</li>
+<li><!-- raw HTML omitted --> Size <!-- raw HTML omitted --> : The length of the Array. Similar to the <code>len</code> function</li>
+<li><!-- raw HTML omitted --> Append <!-- raw HTML omitted --> : Append a thing into the Array</li>
+<li><!-- raw HTML omitted --> GetItem <!-- raw HTML omitted --> : Retieve the nth elemen in the Array</li>
+<li><!-- raw HTML omitted --> Map <!-- raw HTML omitted --> : Apply a function to each element in <code>MArray</code> and returns a new <code>MArray</code></li>
+<li><!-- raw HTML omitted --> RemoveItem <!-- raw HTML omitted --> : Remove an nth element from the <code>MArray</code> and shrink the Array</li>
+</ul>
+<h4 id="pushback--append">
+  PushBack &amp; Append
+  <a class="heading-link" href="#pushback--append">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Here is a function for the <code>MArray</code> type struct that has one of the T as input and
+it appends it into the Array</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">func</span> (this <span style="color:#719e07">*</span><span style="color:#268bd2">MArray</span>(T)) <span style="color:#268bd2">PushBack</span>(e T) <span style="color:#719e07">*</span><span style="color:#268bd2">MArray</span>(T) {
+</span></span><span style="display:flex;"><span>  this.things = <span style="color:#b58900">append</span>(this.things, e)
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> this
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">func</span> (this <span style="color:#719e07">*</span><span style="color:#268bd2">MArray</span>(T)) <span style="color:#268bd2">Append</span>(e T) <span style="color:#719e07">*</span><span style="color:#268bd2">MArray</span>(T) {
+</span></span><span style="display:flex;"><span>  this.things = <span style="color:#b58900">append</span>(this.things, e)
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> this
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="getitem--removeitem">
+  GetItem &amp; RemoveItem
+  <a class="heading-link" href="#getitem--removeitem">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Retrieve the nth element in the Array specified by <code>i</code>
+Returns the element in the Array of type <code>T</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#268bd2">func</span> (this <span style="color:#719e07">*</span><span style="color:#268bd2">MArray</span>(T)) <span style="color:#268bd2">GetItem</span>(i <span style="color:#dc322f">int</span>) T {
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> this.things[i]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Let&rsquo;s get things interesting by removing an element from the Array</p>
+<p>Remove the nth element of the Array. This example does not care much about ordering,
+it is an approach speed of removal is more important than order</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#268bd2">func</span> (this <span style="color:#719e07">*</span><span style="color:#268bd2">Marray</span>(T)) <span style="color:#268bd2">RemoveItem</span>(i <span style="color:#dc322f">int</span>) <span style="color:#719e07">*</span><span style="color:#268bd2">MArray</span>(T) {
+</span></span><span style="display:flex;"><span>    this.things[i] = this.things[<span style="color:#b58900">len</span>(this.things)<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex;"><span>    this.things = this.things[:<span style="color:#b58900">len</span>(this.things)<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">return</span> this
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="size--map">
+  Size &amp; Map
+  <a class="heading-link" href="#size--map">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Let&rsquo;s retrieve the length of the Array with the <code>Size</code> function</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#268bd2">func</span> (this <span style="color:#719e07">*</span><span style="color:#268bd2">MArray</span>(T)) <span style="color:#268bd2">Size</span>() <span style="color:#dc322f">int</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(this.things)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now let&rsquo;s implement a simple <code>Map</code> function
+It takes the <code>MArray</code> , a function to apply, then it applies the function and
+returns a <code>MArray</code> resulted after applying the function to each element of MArray</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#268bd2">func</span> <span style="color:#268bd2">Map</span>(<span style="color:#268bd2">type</span> F, T)(array <span style="color:#268bd2">MArray</span>(F), f <span style="color:#268bd2">func</span>(F) T) <span style="color:#719e07">*</span><span style="color:#268bd2">MArray</span>(T) {
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">var</span> retlist <span style="color:#268bd2">MArray</span>(T)
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">for</span> i <span style="color:#719e07">:=</span> <span style="color:#2aa198">0</span>; i &lt; array.<span style="color:#268bd2">Size</span>(); i<span style="color:#719e07">++</span> {
+</span></span><span style="display:flex;"><span>    el <span style="color:#719e07">:=</span> array.<span style="color:#268bd2">GetItem</span>(i)
+</span></span><span style="display:flex;"><span>    retlist.<span style="color:#268bd2">PushBack</span>(<span style="color:#268bd2">f</span>(el))
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> <span style="color:#719e07">&amp;</span>res
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="conclusions">
+  Conclusions
+  <a class="heading-link" href="#conclusions">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>
+<p>If you are a golang developer, you will be able to use Generics soon.
+It will help you write a single codebase for multipel datatype instead of having to
+write the same set of functions for 15 different types.</p>
+</li>
+<li>
+<p>Go is a simple language and keeps things that way. Build times are fast, code execution is fast and
+efficient. Generics introduces a trade off but keeps the simplicity.</p>
+</li>
+<li>
+<p>Something to look forward to in <code>go</code></p>
+</li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+    integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+    integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Nabin Acharya 
+    ·
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
