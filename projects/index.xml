@@ -1,3 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on N Acharya</title><link>https://nacharya.github.io/projects/</link><description>Recent content in Projects on N Acharya</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 Oct 2021 16:56:50 -0700</lastBuildDate><atom:link href="https://nacharya.github.io/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Software Playground</title><link>https://nacharya.github.io/projects/playground/</link><pubDate>Sun, 10 Oct 2021 16:56:50 -0700</pubDate><guid>https://nacharya.github.io/projects/playground/</guid><description> Mostly code playground for Technology actively used 2022 Frameworks: NodeJS, TensorFlow, PyTorch, Jupyter, Hugo Languages: Go, Python3, TypeScript, C, C++, F# UI: React, Angular Data: S3 Data Access EdgeFile</description></item><item><title>Wealth Forecast for Portfolios</title><link>https://nacharya.github.io/projects/wealthforecast/</link><pubDate>Fri, 10 Jan 2020 10:57:59 -0700</pubDate><guid>https://nacharya.github.io/projects/wealthforecast/</guid><description>Financial Predictions using AI/ML Looking for a good way to predict in linear curves. Here we look at SVM, RandomForest and LinearRegression. We try to come up with a decent prediction by looking at all three.
-wfc wealthfront</description></item><item><title>GenAI and LLM for Content search</title><link>https://nacharya.github.io/projects/genai/</link><pubDate>Sat, 14 Jul 2018 16:54:55 -0700</pubDate><guid>https://nacharya.github.io/projects/genai/</guid><description> GenAI and LLM for Content Search and problem solving A small project primarily around Proof Of Concepts on the usage of
-GenAI &amp;amp; LLM: OpenAI, llama2 AI Interacting frameworks: langchain &amp;amp; Autoencoders UI : streamlit, pynecone</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on N Acharya</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on N Acharya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Nov 2023 20:56:16 -0800</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Access Layer</title>
+      <link>http://localhost:1313/projects/datalayer/</link>
+      <pubDate>Thu, 16 Nov 2023 20:56:16 -0800</pubDate>
+      
+      <guid>http://localhost:1313/projects/datalayer/</guid>
+      
+      <description>Data Access Layer </description>
+      
+    </item>
+    
+    <item>
+      <title>Software Playground</title>
+      <link>http://localhost:1313/projects/playground/</link>
+      <pubDate>Sun, 10 Oct 2021 16:56:50 -0700</pubDate>
+      
+      <guid>http://localhost:1313/projects/playground/</guid>
+      
+      <description>Mostly code playground for Technology actively used 2022 Frameworks: NodeJS, TensorFlow, PyTorch, Jupyter, Hugo Languages: Go, Python3, TypeScript, C, C++, F# UI: React, Angular Data: S3 Data Access EdgeFile </description>
+      
+    </item>
+    
+    <item>
+      <title>Wealth Forecast for Portfolios</title>
+      <link>http://localhost:1313/projects/wealthforecast/</link>
+      <pubDate>Fri, 10 Jan 2020 10:57:59 -0700</pubDate>
+      
+      <guid>http://localhost:1313/projects/wealthforecast/</guid>
+      
+      <description>Financial Predictions using AI/ML Looking for a good way to predict in linear curves. Here we look at SVM, RandomForest and LinearRegression. We try to come up with a decent prediction by looking at all three.
+wfc wealthfront</description>
+      
+    </item>
+    
+    <item>
+      <title>GenAI and LLM for Content search</title>
+      <link>http://localhost:1313/projects/genai/</link>
+      <pubDate>Sat, 14 Jul 2018 16:54:55 -0700</pubDate>
+      
+      <guid>http://localhost:1313/projects/genai/</guid>
+      
+      <description>GenAI and LLM for Content Search and problem solving A small project primarily around Proof Of Concepts on the usage of
+GenAI &amp;amp; LLM: OpenAI, llama2 AI Interacting frameworks: langchain &amp;amp; Autoencoders UI : streamlit, pynecone </description>
+      
+    </item>
+    
+  </channel>
+</rss>
