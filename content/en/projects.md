@@ -17,15 +17,14 @@ prediction by looking at all three.
 [wfc](http://github.com/nacharya/wfc)
 [wealthfront](https://wealthforecast.streamlit.app/)
 
-
 ### Playground for Technology actively used 2024
 
-- Frameworks: NodeJS, TensorFlow, PyTorch, Jupyter, Hugo
 - Languages: Go, Python3, TypeScript, Rust
 - UI: React, Angular
-- Data:
-    - [S3 Data Access](http://github.com/nacharya/edgex_access)
-    - [EdgeFile](http://github.com/nacharya/edgex_file)
+- Frameworks: NodeJS, TensorFlow, PyTorch, Jupyter, Hugo
+- Cloud/Data:
+    - [AWS](http://aws.amazon.com)
+    - [Azure](http://www.azure.com)
 
 ### GenAI and LLM for Content Search and problem solving
 
@@ -34,4 +33,17 @@ A small project primarily around Proof Of Concepts on the usage of
 - GenAI & LLM: OpenAI, llama2 
 - AI Interacting frameworks: langchain & Autoencoders 
 - UI : streamlit, pynecone
+
+### MicroFunc: a dotnet enabled Functional container using F#
+
+- dotnet for alpine 
+- F# functional with access to dotnet 
+- Small but purely functional
+
+### Looma: AI ENabled educational platforms for developeing countries
+
+- Base Platform Architecture 
+- Edge & Cloud
+- AI Enablement
+
 

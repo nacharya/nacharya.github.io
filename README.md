@@ -1,10 +1,12 @@
-# Sitesource
+# Sitesource & Content 
 
-The *build-repo* for the __content-repo__ of [nacharya.github.io](https://nacharya.github.io)
+The *build-repo* and the __content-repo__ of [nacharya.github.io](https://nacharya.github.io)
 
-- *build_repo* : [sitesource](http://github.com/nacharya/sitesource)
+- *build_repo* : [nacharya.github.io](http://github.com/nacharya/nacharya.github.io)
 - __content-repo__ : [nacharya.github.io](http://github.com/nacharya/nacharya.github.io)
 - *theme* used in this blog is [hugo-blog-awesome](https://github.com/hugo-sid/hugo-blog-awesome)
+
+*Note: The *build-repo* and the __content-repo__ used to be separate in the past but now they are the same. This does make things easier to maintain and deploy.
 
 The *theme* stays as a `submodule` and needs to be updated periodically. 
 
