@@ -48,8 +48,8 @@ In this example, `x` is borrowed by the `print_value` function, and since the bo
 
 ### Performance
 
-The memory safety we mentioned earlier leads to performance advantages and eliminates the need of a 
-garbage collector. This leads to lower runtime overhead and more predictable performance, especially in memory-intensive applications. Rust also offers zero-cost abstractions, meaning the high-level abstractions do not incur additional runtime costs compared to lower-level code. Furthermore, Rust’s concurrency model, which avoids data races by design, allows developers to write highly parallel and concurrent programs without compromising safety. For example, in systems programming, a Rust program that manages multiple threads to process data can do so efficiently without the risk of race conditions or memory leaks, providing performance on par with C or C++ while maintaining safer code.
+The memory safety we mentioned earlier leads to performance advantages and eliminates the need for a 
+garbage collector. There is lower runtime overhead and more predictable performance, especially in memory-intensive applications. Rust also offers zero-cost abstractions, meaning the high-level abstractions do not incur additional runtime costs compared to lower-level code. Furthermore, Rust’s concurrency model, which avoids data races by design, allows developers to write highly parallel and concurrent programs without compromising safety. For example, in systems programming, a Rust program that manages multiple threads to process data can do so efficiently without the risk of race conditions or memory leaks, providing performance on par with C or C++ while maintaining safer code.
 
 
 ### Concurrency
