@@ -2,14 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/projects/datalayer/</loc>
-    <lastmod>2023-11-16T20:56:16-08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2023-11-16T20:56:16-08:00</lastmod>
+    <lastmod>2025-03-13T22:55:28-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
-    <lastmod>2023-11-16T20:56:16-08:00</lastmod>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-03-13T22:55:28-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/uv/</loc>
+    <lastmod>2025-03-13T22:55:28-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/rust_lang/</loc>
+    <lastmod>2024-06-24T14:17:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/articles/</loc>
     <lastmod>2023-11-16T10:22:22-08:00</lastmod>
@@ -18,9 +21,6 @@
     <lastmod>2023-11-16T10:22:22-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/llm/</loc>
-    <lastmod>2023-10-24T11:50:56-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2023-10-24T11:50:56-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/go/</loc>
@@ -50,8 +50,8 @@
     <loc>http://localhost:1313/posts/p310/</loc>
     <lastmod>2021-11-27T14:21:32-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/playground/</loc>
-    <lastmod>2021-10-10T16:56:50-07:00</lastmod>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2021-09-07T18:19:10-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ubuntu/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
@@ -64,9 +64,6 @@
   </url><url>
     <loc>http://localhost:1313/articles/architecture/</loc>
     <lastmod>2020-07-18T16:48:41-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/projects/wealthforecast/</loc>
-    <lastmod>2020-01-10T10:57:59-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
@@ -83,16 +80,10 @@
     <loc>http://localhost:1313/posts/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/series/themes-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/privacy/</loc>
@@ -119,12 +110,7 @@
     <loc>http://localhost:1313/posts/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/genai/</loc>
-    <lastmod>2018-07-14T16:54:55-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/articles/the_three_pillars/</loc>
     <lastmod>2018-02-09T13:49:42-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/</loc>
   </url>
 </urlset>

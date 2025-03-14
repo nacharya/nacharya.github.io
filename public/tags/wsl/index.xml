@@ -6,14 +6,28 @@
     <description>Recent content in WSL on N Acharya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WSLv2 and Windows 10 Pro</title>
       <link>http://localhost:1313/posts/wsl/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/wsl/</guid>
-      <description>Installing WSLv2 on Windows and using Linux natively on Windows Pre-requisites Windows 10 May 2020 (2004) or Windows 10 May 2019 (1903) or Windows 10 November 2019 (1909) or later Computer with Hyper-V support for virtualization Pathces : If you have Windows revisions 1903 or 1909 make sure you can install the patches: Windows Update KB4566116&#xA;1. WSL has to be enabled Once the installation is complete, please enable the WSL using the following Powershell</description>
+      
+      <description>&lt;h2 id=&#34;installing-wslv2-on-windows-and-using-linux-natively-on-windows&#34;&gt;Installing WSLv2 on Windows and using Linux natively on Windows&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows 10 May 2020 (2004)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;or  &lt;strong&gt;Windows 10 May 2019 (1903)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;or &lt;strong&gt;Windows 10 November 2019 (1909)&lt;/strong&gt; or later&lt;/li&gt;
+&lt;li&gt;Computer with Hyper-V support for virtualization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Pathces&lt;/strong&gt;&lt;/em&gt; : If you have Windows revisions 1903 or 1909 make sure you can install the
+patches: &lt;a href=&#34;https://support.microsoft.com/en-us/help/4566116/windows-10-update-kb4566116&#34;&gt;Windows Update KB4566116&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-wsl-has-to-be-enabled&#34;&gt;1. WSL has to be enabled&lt;/h2&gt;
+&lt;p&gt;Once the installation is complete, please enable the WSL using the following Powershell&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

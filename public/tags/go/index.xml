@@ -6,14 +6,20 @@
     <description>Recent content in Go on N Acharya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Sep 2023 14:36:37 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 14:36:37 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go: Contexts, Channels &amp; Goroutines</title>
       <link>http://localhost:1313/posts/gocontext/</link>
       <pubDate>Thu, 28 Sep 2023 14:36:37 -0700</pubDate>
+      
       <guid>http://localhost:1313/posts/gocontext/</guid>
-      <description>Go: Contexts, Channels &amp;amp; Goroutines Concurrency In Computer Science Concurrency is very important because efficient resource management of core resources like Processor, Memory and Network usage. Any large complex probelem can be broken down into smaller problem tasks that can be handled concurrently. This also allows applications to be faster and scale efficiently.&#xA;When tasks can be broken down into smaller tasks, responsiveness of systems can be enhanced and also create better human interactiveness.</description>
+      
+      <description>&lt;h2 id=&#34;go-contexts-channels--goroutines&#34;&gt;Go: Contexts, Channels &amp;amp; Goroutines&lt;/h2&gt;
+&lt;h3 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h3&gt;
+&lt;p&gt;In Computer Science &lt;code&gt;Concurrency&lt;/code&gt; is  very important because efficient resource management of core resources like Processor, Memory and Network usage. Any large complex probelem can be broken down into smaller problem tasks that can be handled concurrently. This also allows applications to be faster and scale efficiently.&lt;/p&gt;
+&lt;p&gt;When tasks can be broken down into smaller tasks, responsiveness of systems can be enhanced and also create better human interactiveness.&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>
