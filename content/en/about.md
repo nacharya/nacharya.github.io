@@ -46,7 +46,7 @@ _With realization of one's own potential and self-confidence in one's ability, o
 </span>
 
 <span style="color:white">
-A personal belief ..... It is best to spend time to make this world a better place for every human.
+A personal belief ..... It is best to spend time to make this world a better place for every human. Life is short. Make it count.
 </span>
 
 ### Contact

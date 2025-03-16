@@ -1,9 +1,10 @@
 +++
-title = 'uv: Python package, dependency and environment management'
+title = "uv: Package, Project, Dependency, Environment"
 date = 2025-03-13T22:55:28-07:00
 draft = false
 +++
 
+Finally we have a really good package, project, dependency and environment management tool for Python.
 
 `uv` is a Python package, dependency and environment management tool. It is a good replacement for 
 `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, `twine`, `virtualenv` 

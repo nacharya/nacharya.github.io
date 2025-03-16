@@ -17,10 +17,10 @@ prediction by looking at all three.
 [wfc](http://github.com/nacharya/wfc)
 [wealthfront](https://wealthforecast.streamlit.app/)
 
-### Playground for Technology actively used 2024
+### Playground for Technology actively used 2025
 
-- Languages: Go, Python3, TypeScript, Rust
-- UI: React, Angular
+- Languages: Go, Rust, Python3, TypeScript
+- UI: React, streamlit
 - Frameworks: NodeJS, TensorFlow, PyTorch, Jupyter, Hugo
 - Cloud/Data:
     - [AWS](http://aws.amazon.com)
@@ -30,9 +30,9 @@ prediction by looking at all three.
 
 A small project primarily around Proof Of Concepts on the usage of 
 
-- GenAI & LLM: OpenAI, llama2 
-- AI Interacting frameworks: langchain & Autoencoders 
-- UI : streamlit, pynecone
+- GenAI & LLM: OpenAI, llama2 , deepseek
+- AI Interacting frameworks: langchain, HuggingFace, Qdrant
+- UI : streamlit, React
 
 ### MicroFunc: a dotnet enabled Functional container using F#
 
@@ -40,10 +40,11 @@ A small project primarily around Proof Of Concepts on the usage of
 - F# functional with access to dotnet 
 - Small but purely functional
 
-### Looma: AI ENabled educational platforms for developeing countries
+### [Looma](https://www.looma.education/about-us): AI Enabled educational platforms for developing countries
 
 - Base Platform Architecture 
 - Edge & Cloud
 - AI Enablement
+
 
 

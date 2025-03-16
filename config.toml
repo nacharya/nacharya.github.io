@@ -125,3 +125,8 @@ url = "https://twitter.com"
 name = "email"
 url = "mailto:nabin.acharya@gmail.com"
 
+# n: added for google adsense
+[module]
+  [[module.imports]]
+    path = 'modules/google-adsense'
+

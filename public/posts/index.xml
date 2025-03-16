@@ -6,21 +6,36 @@
     <description>Recent content in Posts on N Acharya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Mar 2025 22:55:28 -0700</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Mar 2025 18:18:15 -0700</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>uv: Python package, dependency and environment management</title>
+      <title>Why Rust ?</title>
+      <link>http://localhost:1313/posts/why_rust/</link>
+      <pubDate>Sat, 15 Mar 2025 18:18:15 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/why_rust/</guid>
+      
+      <description>&lt;p&gt;It&amp;rsquo;s a question that I&amp;rsquo;ve been asked a lot lately, and I think it&amp;rsquo;s worth looking into.
+Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
+It&amp;rsquo;s a language that&amp;rsquo;s been around for a while, but it&amp;rsquo;s only recently started to gain popularity.
+After all it has made it to 14 in the &lt;a href=&#34;https://www.tiobe.com/tiobe-index/&#34;&gt;TIOBE index&lt;/a&gt;
+It is the most admired language in &lt;a href=&#34;https://survey.stackoverflow.co/2024/technology/#admired-and-desired&#34;&gt;Stack Overflow Survery for 2024&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>uv: Package, Project, Dependency, Environment</title>
       <link>http://localhost:1313/posts/uv/</link>
       <pubDate>Thu, 13 Mar 2025 22:55:28 -0700</pubDate>
       
       <guid>http://localhost:1313/posts/uv/</guid>
       
-      <description>&lt;p&gt;&lt;code&gt;uv&lt;/code&gt; is a Python package, dependency and environment management tool. It is a good replacement for
+      <description>&lt;p&gt;Finally we have a really good package, project, dependency and environment management tool for Python.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;uv&lt;/code&gt; is a Python package, dependency and environment management tool. It is a good replacement for
 &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt;, &lt;code&gt;pipx&lt;/code&gt;, &lt;code&gt;poetry&lt;/code&gt;, &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;twine&lt;/code&gt;, &lt;code&gt;virtualenv&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Coming from a &lt;code&gt;rust&lt;/code&gt; ecosystem, &lt;code&gt;uv&lt;/code&gt; is inspired by &lt;code&gt;cargo&lt;/code&gt; and &lt;code&gt;rustup&lt;/code&gt;. There are lots of
 similarities between &lt;code&gt;cargo&lt;/code&gt; and &lt;code&gt;uv&lt;/code&gt;. In the traditional Python ecosystem, there are too many
 tools to manage packages, dependencies and environments. &lt;code&gt;uv&lt;/code&gt; tries to unify all these tools into
-one.&lt;/p&gt;
-&lt;p&gt;Advantages:&lt;/p&gt;</description>
+one.&lt;/p&gt;</description>
       
     </item>
     

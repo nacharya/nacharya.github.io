@@ -1,0 +1,3 @@
+[submodule "themes/modules/google-adsense"]
+	path = themes/modules/google-adsense
+	url = https://github.com/hugomods/google-adsense.git
