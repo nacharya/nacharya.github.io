@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/articles/</loc>
+    <lastmod>2025-03-17T18:12:46-07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-03-15T18:18:15-07:00</lastmod>
+    <lastmod>2025-03-17T18:12:46-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/articles/newleaderhip/</loc>
+    <lastmod>2025-03-17T18:12:46-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-03-15T18:18:15-07:00</lastmod>
@@ -16,9 +22,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/rust_lang/</loc>
     <lastmod>2024-06-24T14:17:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/articles/</loc>
-    <lastmod>2023-11-16T10:22:22-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/articles/top5/</loc>
     <lastmod>2023-11-16T10:22:22-08:00</lastmod>
