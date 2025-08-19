@@ -5,6 +5,7 @@ The *build-repo* and the __content-repo__ of [nacharya.github.io](https://nachar
 - *build_repo* : [nacharya.github.io](http://github.com/nacharya/nacharya.github.io)
 - __content-repo__ : [nacharya.github.io](http://github.com/nacharya/nacharya.github.io)
 - *theme* used in this blog is [hugo-blog-awesome](https://github.com/hugo-sid/hugo-blog-awesome)
+- *theme* alternative for this blog is [lightbi-hugo](https://github.com/binokochumolvarghese/lightbi-hugo)
 
 *Note: The *build-repo* and the __content-repo__ used to be separate in the past but now they are the same. This does make things easier to maintain and deploy.
 
