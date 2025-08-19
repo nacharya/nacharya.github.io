@@ -4,16 +4,19 @@
     <title>Emoji on N Acharya</title>
     <link>https://nacharya.github.io/tags/emoji/</link>
     <description>Recent content in Emoji on N Acharya</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nacharya.github.io/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://nacharya.github.io/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emoji Support using Hugo shortcodes</title>
       <link>https://nacharya.github.io/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/posts/emoji-support/</guid>
+      
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

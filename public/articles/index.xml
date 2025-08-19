@@ -4,44 +4,94 @@
     <title>Articles on N Acharya</title>
     <link>https://nacharya.github.io/articles/</link>
     <description>Recent content in Articles on N Acharya</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Mar 2025 18:12:46 -0700</lastBuildDate>
-    <atom:link href="https://nacharya.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Mar 2025 18:12:46 -0700</lastBuildDate><atom:link href="https://nacharya.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stay Ambitious, and Stay Humble</title>
       <link>https://nacharya.github.io/articles/newleaderhip/</link>
       <pubDate>Mon, 17 Mar 2025 18:12:46 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/articles/newleaderhip/</guid>
-      <description>&lt;p&gt;Given how AI has changed the scope of the Knowledge-Intensive Occupations,&#xA;the leadership of the future will need to be more adaptive , flexible and creative.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s hope the future leaders will be able to stay ambitious and humble at the same time.&#xA;There are fair number of leaders who are so complacent that they are not able to see the&#xA;change coming.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s look at a few leadership skills that will be needed in the future:&lt;/p&gt;</description>
+      
+      <description>&lt;p&gt;Given how AI has changed the scope of the Knowledge-Intensive Occupations,
+the leadership of the future will need to be more adaptive , flexible and creative.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s hope the future leaders will be able to stay ambitious and humble at the same time.
+There are fair number of leaders who are so complacent that they are not able to see the
+change coming.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s look at a few leadership skills that will be needed in the future:&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Top 5 Software Architectural Patterns</title>
       <link>https://nacharya.github.io/articles/top5/</link>
       <pubDate>Thu, 16 Nov 2023 10:22:22 -0800</pubDate>
+      
       <guid>https://nacharya.github.io/articles/top5/</guid>
-      <description>&lt;h2 id=&#34;top-5-software-architectural-patterns&#34;&gt;Top 5 Software Architectural patterns&lt;/h2&gt;&#xA;&lt;p&gt;Software Architectures are the foundations to Software systems. Choice and correct use of&#xA;an appropriate pattern is really important when building large software systems&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-layered-architecture&#34;&gt;1. Layered Architecture&lt;/h3&gt;&#xA;&lt;p&gt;A system is separated into sub-systems as distictictly different layers that communicates&#xA;to each other layer it is adjacent to.&lt;/p&gt;&#xA;&lt;p&gt;A very common example of Architecture is the following list of layers&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Presentation Layer&lt;/li&gt;&#xA;&lt;li&gt;Business Layer&lt;/li&gt;&#xA;&lt;li&gt;Persistence Layer&lt;/li&gt;&#xA;&lt;li&gt;Database Layer&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://nacharya.github.io/images/layered_pic.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;top-5-software-architectural-patterns&#34;&gt;Top 5 Software Architectural patterns&lt;/h2&gt;
+&lt;p&gt;Software Architectures are the foundations to Software systems. Choice and correct use of
+an appropriate pattern is really important when building large software systems&lt;/p&gt;
+&lt;h3 id=&#34;1-layered-architecture&#34;&gt;1. Layered Architecture&lt;/h3&gt;
+&lt;p&gt;A system is separated into sub-systems as distictictly different layers that communicates
+to each other layer it is adjacent to.&lt;/p&gt;
+&lt;p&gt;A very common example of Architecture is the following list of layers&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Presentation Layer&lt;/li&gt;
+&lt;li&gt;Business Layer&lt;/li&gt;
+&lt;li&gt;Persistence Layer&lt;/li&gt;
+&lt;li&gt;Database Layer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://nacharya.github.io/images/layered_pic.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Spirit Mind Body</title>
       <link>https://nacharya.github.io/articles/spirit-mind-body/</link>
       <pubDate>Tue, 14 Mar 2023 16:46:13 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/articles/spirit-mind-body/</guid>
-      <description>&lt;h2 id=&#34;spirit&#34;&gt;Spirit&lt;/h2&gt;&#xA;&lt;p&gt;Humans need &lt;code&gt;spirit&lt;/code&gt;  well above their mind and body. Some people call it &lt;code&gt;Religion&lt;/code&gt;,&#xA;some call it the &lt;code&gt;Universal Truth&lt;/code&gt;. It is very difficult to describe logically, but it exists &amp;ndash; in &lt;code&gt;spirit&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Have been involved with multiple religious faiths, atheistic&#xA;beliefs, rational scientific explanations &amp;ndash; and &amp;ndash; realized that there is this notion of &lt;code&gt;spirit&lt;/code&gt; that every human needs&lt;/p&gt;&#xA;&lt;p&gt;It is something up there somewhere that can only be imagined for truthfulness beyond everything&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;spirit&#34;&gt;Spirit&lt;/h2&gt;
+&lt;p&gt;Humans need &lt;code&gt;spirit&lt;/code&gt;  well above their mind and body. Some people call it &lt;code&gt;Religion&lt;/code&gt;,
+some call it the &lt;code&gt;Universal Truth&lt;/code&gt;. It is very difficult to describe logically, but it exists &amp;ndash; in &lt;code&gt;spirit&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Have been involved with multiple religious faiths, atheistic
+beliefs, rational scientific explanations &amp;ndash; and &amp;ndash; realized that there is this notion of &lt;code&gt;spirit&lt;/code&gt; that every human needs&lt;/p&gt;
+&lt;p&gt;It is something up there somewhere that can only be imagined for truthfulness beyond everything&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Architecture: What is it ? why do we care ?</title>
       <link>https://nacharya.github.io/articles/architecture/</link>
       <pubDate>Sat, 18 Jul 2020 16:48:41 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/articles/architecture/</guid>
-      <description>&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;&#xA;&lt;p&gt;So what is &lt;code&gt;Architecture&lt;/code&gt; ? As a kid , I only saw that everyone ties in the word Architecture to Buildings and Physical Structures that somehow captures human emotions intellectually.&lt;/p&gt;&#xA;&lt;p&gt;Folks working in Technology were a few and the word Architect was hardly used&#xA;to describe anyone in the Software/IT profession.&lt;/p&gt;&#xA;&lt;p&gt;People in the Software world have long argued the use of the word &lt;code&gt;Architecture&lt;/code&gt;.&#xA;Here are some assumptions on the definition of the word &lt;code&gt;Architecture&lt;/code&gt;&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;So what is &lt;code&gt;Architecture&lt;/code&gt; ? As a kid , I only saw that everyone ties in the word Architecture to Buildings and Physical Structures that somehow captures human emotions intellectually.&lt;/p&gt;
+&lt;p&gt;Folks working in Technology were a few and the word Architect was hardly used
+to describe anyone in the Software/IT profession.&lt;/p&gt;
+&lt;p&gt;People in the Software world have long argued the use of the word &lt;code&gt;Architecture&lt;/code&gt;.
+Here are some assumptions on the definition of the word &lt;code&gt;Architecture&lt;/code&gt;&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>The Three Pillars: Foundational Belief</title>
       <link>https://nacharya.github.io/articles/the_three_pillars/</link>
       <pubDate>Fri, 09 Feb 2018 13:49:42 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/articles/the_three_pillars/</guid>
-      <description>&lt;h2 id=&#34;the-three-pillars-foundational-belief&#34;&gt;The Three Pillars: Foundational Belief&lt;/h2&gt;&#xA;&lt;p&gt;Having spent many years working in the IT industry, here are some foundational pillars that have helped me all along. The industry is ever evolving and always progressing. With the rise of the internet in the &amp;rsquo;90s came the &lt;code&gt;Internet Landslide&lt;/code&gt; of information and thus came the challenge of traversing this landslide&lt;/p&gt;&#xA;&lt;p&gt;Turns out the human mind is capable of so much &amp;hellip; so much more. The rise of information helped create a human belief of &lt;code&gt;Always Learning&lt;/code&gt;, a fundamental belief&#xA;so engrained in our inner self, that the digital world has actually helped us achieve with ease.&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;the-three-pillars-foundational-belief&#34;&gt;The Three Pillars: Foundational Belief&lt;/h2&gt;
+&lt;p&gt;Having spent many years working in the IT industry, here are some foundational pillars that have helped me all along. The industry is ever evolving and always progressing. With the rise of the internet in the &amp;rsquo;90s came the &lt;code&gt;Internet Landslide&lt;/code&gt; of information and thus came the challenge of traversing this landslide&lt;/p&gt;
+&lt;p&gt;Turns out the human mind is capable of so much &amp;hellip; so much more. The rise of information helped create a human belief of &lt;code&gt;Always Learning&lt;/code&gt;, a fundamental belief
+so engrained in our inner self, that the digital world has actually helped us achieve with ease.&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

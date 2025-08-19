@@ -4,114 +4,256 @@
     <title>Posts on N Acharya</title>
     <link>https://nacharya.github.io/posts/</link>
     <description>Recent content in Posts on N Acharya</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Mar 2025 18:18:15 -0700</lastBuildDate>
-    <atom:link href="https://nacharya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Mar 2025 18:18:15 -0700</lastBuildDate><atom:link href="https://nacharya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Rust ?</title>
       <link>https://nacharya.github.io/posts/why_rust/</link>
       <pubDate>Sat, 15 Mar 2025 18:18:15 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/posts/why_rust/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s a question that I&amp;rsquo;ve been asked a lot lately, and I think it&amp;rsquo;s worth looking into.&#xA;Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.&#xA;It&amp;rsquo;s a language that&amp;rsquo;s been around for a while, but it&amp;rsquo;s only recently started to gain popularity.&#xA;After all it has made it to 14 in the &lt;a href=&#34;https://www.tiobe.com/tiobe-index/&#34;&gt;TIOBE index&lt;/a&gt;&#xA;It is the most admired language in &lt;a href=&#34;https://survey.stackoverflow.co/2024/technology/#admired-and-desired&#34;&gt;Stack Overflow Survery for 2024&lt;/a&gt;&lt;/p&gt;</description>
+      
+      <description>&lt;p&gt;It&amp;rsquo;s a question that I&amp;rsquo;ve been asked a lot lately, and I think it&amp;rsquo;s worth looking into.
+Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
+It&amp;rsquo;s a language that&amp;rsquo;s been around for a while, but it&amp;rsquo;s only recently started to gain popularity.
+After all it has made it to 14 in the &lt;a href=&#34;https://www.tiobe.com/tiobe-index/&#34;&gt;TIOBE index&lt;/a&gt;
+It is the most admired language in &lt;a href=&#34;https://survey.stackoverflow.co/2024/technology/#admired-and-desired&#34;&gt;Stack Overflow Survery for 2024&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>uv: Package, Project, Dependency, Environment</title>
       <link>https://nacharya.github.io/posts/uv/</link>
       <pubDate>Thu, 13 Mar 2025 22:55:28 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/posts/uv/</guid>
-      <description>&lt;p&gt;Finally we have a really good package, project, dependency and environment management tool for Python.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;uv&lt;/code&gt; is a Python package, dependency and environment management tool. It is a good replacement for&#xA;&lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt;, &lt;code&gt;pipx&lt;/code&gt;, &lt;code&gt;poetry&lt;/code&gt;, &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;twine&lt;/code&gt;, &lt;code&gt;virtualenv&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Coming from a &lt;code&gt;rust&lt;/code&gt; ecosystem, &lt;code&gt;uv&lt;/code&gt; is inspired by &lt;code&gt;cargo&lt;/code&gt; and &lt;code&gt;rustup&lt;/code&gt;. There are lots of&#xA;similarities between &lt;code&gt;cargo&lt;/code&gt; and &lt;code&gt;uv&lt;/code&gt;. In the traditional Python ecosystem, there are too many&#xA;tools to manage packages, dependencies and environments. &lt;code&gt;uv&lt;/code&gt; tries to unify all these tools into&#xA;one.&lt;/p&gt;</description>
+      
+      <description>&lt;p&gt;Finally we have a really good package, project, dependency and environment management tool for Python.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;uv&lt;/code&gt; is a Python package, dependency and environment management tool. It is a good replacement for
+&lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;pip-tools&lt;/code&gt;, &lt;code&gt;pipx&lt;/code&gt;, &lt;code&gt;poetry&lt;/code&gt;, &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;twine&lt;/code&gt;, &lt;code&gt;virtualenv&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Coming from a &lt;code&gt;rust&lt;/code&gt; ecosystem, &lt;code&gt;uv&lt;/code&gt; is inspired by &lt;code&gt;cargo&lt;/code&gt; and &lt;code&gt;rustup&lt;/code&gt;. There are lots of
+similarities between &lt;code&gt;cargo&lt;/code&gt; and &lt;code&gt;uv&lt;/code&gt;. In the traditional Python ecosystem, there are too many
+tools to manage packages, dependencies and environments. &lt;code&gt;uv&lt;/code&gt; tries to unify all these tools into
+one.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Rust Language: Features</title>
       <link>https://nacharya.github.io/posts/rust_lang/</link>
       <pubDate>Mon, 24 Jun 2024 14:17:00 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/posts/rust_lang/</guid>
-      <description>&lt;h2 id=&#34;rust--a-rock-solid-programming-language&#34;&gt;Rust : A rock solid programming language&lt;/h2&gt;&#xA;&lt;p&gt;Rust is a great fresh look at the programming world. It has gained&#xA;popularity for its robust features that addresses many common programming&#xA;challenges.&lt;/p&gt;&#xA;&lt;p&gt;After actively using it for the last six months, here is my brief review.&lt;/p&gt;&#xA;&lt;p&gt;Some of these are:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Memory Safety&lt;/li&gt;&#xA;&lt;li&gt;Performance&lt;/li&gt;&#xA;&lt;li&gt;Concurrency&lt;/li&gt;&#xA;&lt;li&gt;Type Safety&lt;/li&gt;&#xA;&lt;li&gt;Pattern Matching&lt;/li&gt;&#xA;&lt;li&gt;Cargo&lt;/li&gt;&#xA;&lt;li&gt;Documentation and Tooling&lt;/li&gt;&#xA;&lt;li&gt;Rich Ecosystem&lt;/li&gt;&#xA;&lt;li&gt;Interoperability&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s look at each of these items with small examples in the &lt;code&gt;rust&lt;/code&gt; programming&#xA;language&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;rust--a-rock-solid-programming-language&#34;&gt;Rust : A rock solid programming language&lt;/h2&gt;
+&lt;p&gt;Rust is a great fresh look at the programming world. It has gained
+popularity for its robust features that addresses many common programming
+challenges.&lt;/p&gt;
+&lt;p&gt;After actively using it for the last six months, here is my brief review.&lt;/p&gt;
+&lt;p&gt;Some of these are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Memory Safety&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Concurrency&lt;/li&gt;
+&lt;li&gt;Type Safety&lt;/li&gt;
+&lt;li&gt;Pattern Matching&lt;/li&gt;
+&lt;li&gt;Cargo&lt;/li&gt;
+&lt;li&gt;Documentation and Tooling&lt;/li&gt;
+&lt;li&gt;Rich Ecosystem&lt;/li&gt;
+&lt;li&gt;Interoperability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let&amp;rsquo;s look at each of these items with small examples in the &lt;code&gt;rust&lt;/code&gt; programming
+language&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>LLM</title>
       <link>https://nacharya.github.io/posts/llm/</link>
       <pubDate>Tue, 24 Oct 2023 11:50:56 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/posts/llm/</guid>
-      <description>&lt;h2 id=&#34;scope&#34;&gt;Scope&lt;/h2&gt;&#xA;&lt;p&gt;Given there is so much information available in the Internet on Generative AI, let&amp;rsquo;s keep this brief and to the point of relevant topics.&lt;/p&gt;&#xA;&lt;h3 id=&#34;lets-start-by-asking-chatgpt&#34;&gt;Let&amp;rsquo;s start by asking ChatGPT&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://chat.openai.com/c/df7c8627-0581-47dc-99e9-62c3722957f2&#34;&gt;ChatGPT&lt;/a&gt; : What is Large Language Model ?&lt;/p&gt;&#xA;&lt;p&gt;A large language model, often referred to simply as an &amp;ldquo;LLM,&amp;rdquo; is a type of artificial intelligence (AI) model designed to understand and generate human language&amp;hellip;&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;Here are the main points that ChatGPT came with &amp;hellip;.&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;scope&#34;&gt;Scope&lt;/h2&gt;
+&lt;p&gt;Given there is so much information available in the Internet on Generative AI, let&amp;rsquo;s keep this brief and to the point of relevant topics.&lt;/p&gt;
+&lt;h3 id=&#34;lets-start-by-asking-chatgpt&#34;&gt;Let&amp;rsquo;s start by asking ChatGPT&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://chat.openai.com/c/df7c8627-0581-47dc-99e9-62c3722957f2&#34;&gt;ChatGPT&lt;/a&gt; : What is Large Language Model ?&lt;/p&gt;
+&lt;p&gt;A large language model, often referred to simply as an &amp;ldquo;LLM,&amp;rdquo; is a type of artificial intelligence (AI) model designed to understand and generate human language&amp;hellip;&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;Here are the main points that ChatGPT came with &amp;hellip;.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Go: Contexts, Channels &amp; Goroutines</title>
       <link>https://nacharya.github.io/posts/gocontext/</link>
       <pubDate>Thu, 28 Sep 2023 14:36:37 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/posts/gocontext/</guid>
-      <description>&lt;h2 id=&#34;go-contexts-channels--goroutines&#34;&gt;Go: Contexts, Channels &amp;amp; Goroutines&lt;/h2&gt;&#xA;&lt;h3 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h3&gt;&#xA;&lt;p&gt;In Computer Science &lt;code&gt;Concurrency&lt;/code&gt; is  very important because efficient resource management of core resources like Processor, Memory and Network usage. Any large complex probelem can be broken down into smaller problem tasks that can be handled concurrently. This also allows applications to be faster and scale efficiently.&lt;/p&gt;&#xA;&lt;p&gt;When tasks can be broken down into smaller tasks, responsiveness of systems can be enhanced and also create better human interactiveness.&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;go-contexts-channels--goroutines&#34;&gt;Go: Contexts, Channels &amp;amp; Goroutines&lt;/h2&gt;
+&lt;h3 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h3&gt;
+&lt;p&gt;In Computer Science &lt;code&gt;Concurrency&lt;/code&gt; is  very important because efficient resource management of core resources like Processor, Memory and Network usage. Any large complex probelem can be broken down into smaller problem tasks that can be handled concurrently. This also allows applications to be faster and scale efficiently.&lt;/p&gt;
+&lt;p&gt;When tasks can be broken down into smaller tasks, responsiveness of systems can be enhanced and also create better human interactiveness.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>AI AI AI</title>
       <link>https://nacharya.github.io/posts/ai-init/</link>
       <pubDate>Mon, 14 Aug 2023 23:24:20 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/posts/ai-init/</guid>
-      <description>&lt;h2 id=&#34;ai-ai-ai--the-many-different-areas--and-growing&#34;&gt;AI, AI, AI &amp;hellip;&amp;hellip;.. the many different areas &amp;hellip;. and growing!&lt;/h2&gt;&#xA;&lt;p&gt;One of the key achievements of AI is the rise of &lt;code&gt;Human Productivity&lt;/code&gt;. One of the best&#xA;toolset mankind can use to improve human civilization.&lt;/p&gt;&#xA;&lt;p&gt;Given the numbers of AI publications has increased from 162,444 in 2010 to 334,497 in 2021,&#xA;this is a fast moving disruptive field of Technology with rapid acceleration. It is very difficult&#xA;to stay on top of the latest research in this field.&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;ai-ai-ai--the-many-different-areas--and-growing&#34;&gt;AI, AI, AI &amp;hellip;&amp;hellip;.. the many different areas &amp;hellip;. and growing!&lt;/h2&gt;
+&lt;p&gt;One of the key achievements of AI is the rise of &lt;code&gt;Human Productivity&lt;/code&gt;. One of the best
+toolset mankind can use to improve human civilization.&lt;/p&gt;
+&lt;p&gt;Given the numbers of AI publications has increased from 162,444 in 2010 to 334,497 in 2021,
+this is a fast moving disruptive field of Technology with rapid acceleration. It is very difficult
+to stay on top of the latest research in this field.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Generics in the Go Language</title>
       <link>https://nacharya.github.io/posts/genericsgo/</link>
       <pubDate>Tue, 21 Dec 2021 14:37:03 -0800</pubDate>
+      
       <guid>https://nacharya.github.io/posts/genericsgo/</guid>
-      <description>&lt;h2 id=&#34;generics-in-go&#34;&gt;Generics in Go&lt;/h2&gt;&#xA;&lt;p&gt;Some well known documents from the past&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://go.googlesource.com/proposal/&amp;#43;/refs/heads/master/design/43651-type-parameters.md&#34;&gt;Type parameters proposal&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://go.dev/blog/why-generics&#34;&gt;Why Generics?&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://go.dev/blog/generics-next-step&#34;&gt;The Next Steps&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;It is December 2021 and &amp;hellip;.we have &lt;a href=&#34;https://go.dev/blog/go1.18beta1&#34;&gt;Go 1.18 beta 1&lt;/a&gt; available.&#xA;The Golang team is hard at work on Golang 1.18, which will be released in February 2022, and it looks like it’s going to be a big one.&lt;/p&gt;&#xA;&lt;p&gt;Once upon a time in C++, when templates were introduced, lots of templates with amazing capabilities came into light, then came STL and standardized most of it to make things extremely powerful and usable.&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;generics-in-go&#34;&gt;Generics in Go&lt;/h2&gt;
+&lt;p&gt;Some well known documents from the past&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://go.googlesource.com/proposal/&amp;#43;/refs/heads/master/design/43651-type-parameters.md&#34;&gt;Type parameters proposal&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://go.dev/blog/why-generics&#34;&gt;Why Generics?&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://go.dev/blog/generics-next-step&#34;&gt;The Next Steps&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is December 2021 and &amp;hellip;.we have &lt;a href=&#34;https://go.dev/blog/go1.18beta1&#34;&gt;Go 1.18 beta 1&lt;/a&gt; available.
+The Golang team is hard at work on Golang 1.18, which will be released in February 2022, and it looks like it’s going to be a big one.&lt;/p&gt;
+&lt;p&gt;Once upon a time in C++, when templates were introduced, lots of templates with amazing capabilities came into light, then came STL and standardized most of it to make things extremely powerful and usable.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Data Analytics Links</title>
       <link>https://nacharya.github.io/posts/data-analytics/</link>
       <pubDate>Sat, 27 Nov 2021 15:30:09 -0800</pubDate>
+      
       <guid>https://nacharya.github.io/posts/data-analytics/</guid>
-      <description>&lt;h2 id=&#34;some-of-the-most-useful-courses-online&#34;&gt;Some of the most useful courses online&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/&#34;&gt;The Data Science Course 2021: Complete Data Science Bootcamp&lt;/a&gt;. The course is very precise and well organized. They have a good combination of theory with good practical examples tht are relevent today&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://online-learning.harvard.edu/course/principles-statistical-and-computational-tools-reproducible-data-science?delta=1&#34;&gt;Principles, Statistical and Computational Tools for Reproducible Data Science&lt;/a&gt; Harvard also has a very nice &lt;a href=&#34;https://www.seas.harvard.edu/applied-computation/graduate-programs/masters-data-science&#34;&gt;Master&amp;rsquo;s program in Data Science&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://bootcamp.berkeley.edu/data/&#34;&gt;Berkeley Online Data Analytics Boot Camp&lt;/a&gt; : Berkeley also has a one year Master&amp;rsquo;s program on Analytics and Data Science.&#xA;Have found the Berkeley courses to be good in terms of practicality.&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;some-of-the-most-useful-courses-online&#34;&gt;Some of the most useful courses online&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/&#34;&gt;The Data Science Course 2021: Complete Data Science Bootcamp&lt;/a&gt;. The course is very precise and well organized. They have a good combination of theory with good practical examples tht are relevent today&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://online-learning.harvard.edu/course/principles-statistical-and-computational-tools-reproducible-data-science?delta=1&#34;&gt;Principles, Statistical and Computational Tools for Reproducible Data Science&lt;/a&gt; Harvard also has a very nice &lt;a href=&#34;https://www.seas.harvard.edu/applied-computation/graduate-programs/masters-data-science&#34;&gt;Master&amp;rsquo;s program in Data Science&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://bootcamp.berkeley.edu/data/&#34;&gt;Berkeley Online Data Analytics Boot Camp&lt;/a&gt; : Berkeley also has a one year Master&amp;rsquo;s program on Analytics and Data Science.
+Have found the Berkeley courses to be good in terms of practicality.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Python 3.10</title>
       <link>https://nacharya.github.io/posts/p310/</link>
       <pubDate>Sat, 27 Nov 2021 14:21:32 -0800</pubDate>
+      
       <guid>https://nacharya.github.io/posts/p310/</guid>
-      <description>&lt;h2 id=&#34;python-310-is-here&#34;&gt;Python 3.10 is here&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.python.org/downloads/release/python-3100/&#34;&gt;Python 3.10&lt;/a&gt; is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)&lt;/p&gt;&#xA;&lt;h3 id=&#34;structural-mattern-matching&#34;&gt;&lt;strong&gt;Structural Mattern Matching&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;In the traditional programming languages, this is usually referred to as the &lt;code&gt;switch ...case&lt;/code&gt;&#xA;statements. Although syntactically it looks like a &lt;code&gt;switch ... case&lt;/code&gt; statement, it is a lot more than that.&lt;/p&gt;&#xA;&lt;p&gt;It allows you to detect and deconstruct different structures the data is defined as, and lets you&#xA;use patterns of your definition. Standard pattern matching is very literal and let&amp;rsquo;s you define explicitly. All in all, it adds good power to the language&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;python-310-is-here&#34;&gt;Python 3.10 is here&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.python.org/downloads/release/python-3100/&#34;&gt;Python 3.10&lt;/a&gt; is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)&lt;/p&gt;
+&lt;h3 id=&#34;structural-mattern-matching&#34;&gt;&lt;strong&gt;Structural Mattern Matching&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;In the traditional programming languages, this is usually referred to as the &lt;code&gt;switch ...case&lt;/code&gt;
+statements. Although syntactically it looks like a &lt;code&gt;switch ... case&lt;/code&gt; statement, it is a lot more than that.&lt;/p&gt;
+&lt;p&gt;It allows you to detect and deconstruct different structures the data is defined as, and lets you
+use patterns of your definition. Standard pattern matching is very literal and let&amp;rsquo;s you define explicitly. All in all, it adds good power to the language&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>WSLv2 and Windows 10 Pro</title>
       <link>https://nacharya.github.io/posts/wsl/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/posts/wsl/</guid>
-      <description>&lt;h2 id=&#34;installing-wslv2-on-windows-and-using-linux-natively-on-windows&#34;&gt;Installing WSLv2 on Windows and using Linux natively on Windows&lt;/h2&gt;&#xA;&lt;h3 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Windows 10 May 2020 (2004)&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;or  &lt;strong&gt;Windows 10 May 2019 (1903)&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;or &lt;strong&gt;Windows 10 November 2019 (1909)&lt;/strong&gt; or later&lt;/li&gt;&#xA;&lt;li&gt;Computer with Hyper-V support for virtualization&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Pathces&lt;/strong&gt;&lt;/em&gt; : If you have Windows revisions 1903 or 1909 make sure you can install the&#xA;patches: &lt;a href=&#34;https://support.microsoft.com/en-us/help/4566116/windows-10-update-kb4566116&#34;&gt;Windows Update KB4566116&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-wsl-has-to-be-enabled&#34;&gt;1. WSL has to be enabled&lt;/h2&gt;&#xA;&lt;p&gt;Once the installation is complete, please enable the WSL using the following Powershell&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;installing-wslv2-on-windows-and-using-linux-natively-on-windows&#34;&gt;Installing WSLv2 on Windows and using Linux natively on Windows&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows 10 May 2020 (2004)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;or  &lt;strong&gt;Windows 10 May 2019 (1903)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;or &lt;strong&gt;Windows 10 November 2019 (1909)&lt;/strong&gt; or later&lt;/li&gt;
+&lt;li&gt;Computer with Hyper-V support for virtualization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Pathces&lt;/strong&gt;&lt;/em&gt; : If you have Windows revisions 1903 or 1909 make sure you can install the
+patches: &lt;a href=&#34;https://support.microsoft.com/en-us/help/4566116/windows-10-update-kb4566116&#34;&gt;Windows Update KB4566116&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-wsl-has-to-be-enabled&#34;&gt;1. WSL has to be enabled&lt;/h2&gt;
+&lt;p&gt;Once the installation is complete, please enable the WSL using the following Powershell&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Markdown Syntax Guide for writing markdown content</title>
       <link>https://nacharya.github.io/posts/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/posts/markdown-syntax/</guid>
+      
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Rich Content within Markdown using Hugo shortcodes</title>
       <link>https://nacharya.github.io/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/posts/rich-content/</guid>
+      
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Placeholder Text</title>
       <link>https://nacharya.github.io/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/posts/placeholder-text/</guid>
+      
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Math Typesetting for Math Equations in Markdown</title>
       <link>https://nacharya.github.io/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/posts/math-typesetting/</guid>
+      
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Emoji Support using Hugo shortcodes</title>
       <link>https://nacharya.github.io/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/posts/emoji-support/</guid>
+      
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

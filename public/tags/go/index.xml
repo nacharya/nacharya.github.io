@@ -4,16 +4,22 @@
     <title>Go on N Acharya</title>
     <link>https://nacharya.github.io/tags/go/</link>
     <description>Recent content in Go on N Acharya</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Sep 2023 14:36:37 -0700</lastBuildDate>
-    <atom:link href="https://nacharya.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 14:36:37 -0700</lastBuildDate><atom:link href="https://nacharya.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go: Contexts, Channels &amp; Goroutines</title>
       <link>https://nacharya.github.io/posts/gocontext/</link>
       <pubDate>Thu, 28 Sep 2023 14:36:37 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/posts/gocontext/</guid>
-      <description>&lt;h2 id=&#34;go-contexts-channels--goroutines&#34;&gt;Go: Contexts, Channels &amp;amp; Goroutines&lt;/h2&gt;&#xA;&lt;h3 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h3&gt;&#xA;&lt;p&gt;In Computer Science &lt;code&gt;Concurrency&lt;/code&gt; is  very important because efficient resource management of core resources like Processor, Memory and Network usage. Any large complex probelem can be broken down into smaller problem tasks that can be handled concurrently. This also allows applications to be faster and scale efficiently.&lt;/p&gt;&#xA;&lt;p&gt;When tasks can be broken down into smaller tasks, responsiveness of systems can be enhanced and also create better human interactiveness.&lt;/p&gt;</description>
+      
+      <description>&lt;h2 id=&#34;go-contexts-channels--goroutines&#34;&gt;Go: Contexts, Channels &amp;amp; Goroutines&lt;/h2&gt;
+&lt;h3 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h3&gt;
+&lt;p&gt;In Computer Science &lt;code&gt;Concurrency&lt;/code&gt; is  very important because efficient resource management of core resources like Processor, Memory and Network usage. Any large complex probelem can be broken down into smaller problem tasks that can be handled concurrently. This also allows applications to be faster and scale efficiently.&lt;/p&gt;
+&lt;p&gt;When tasks can be broken down into smaller tasks, responsiveness of systems can be enhanced and also create better human interactiveness.&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

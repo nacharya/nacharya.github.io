@@ -4,79 +4,118 @@
     <title>Tags on N Acharya</title>
     <link>https://nacharya.github.io/tags/</link>
     <description>Recent content in Tags on N Acharya</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Sep 2023 14:36:37 -0700</lastBuildDate>
-    <atom:link href="https://nacharya.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 14:36:37 -0700</lastBuildDate><atom:link href="https://nacharya.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go</title>
       <link>https://nacharya.github.io/tags/go/</link>
       <pubDate>Thu, 28 Sep 2023 14:36:37 -0700</pubDate>
+      
       <guid>https://nacharya.github.io/tags/go/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Ubuntu</title>
       <link>https://nacharya.github.io/tags/ubuntu/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/ubuntu/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>WSL</title>
       <link>https://nacharya.github.io/tags/wsl/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/wsl/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Css</title>
       <link>https://nacharya.github.io/tags/css/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/css/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Html</title>
       <link>https://nacharya.github.io/tags/html/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/html/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Markdown</title>
       <link>https://nacharya.github.io/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/markdown/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Privacy</title>
       <link>https://nacharya.github.io/tags/privacy/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/privacy/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Shortcodes</title>
       <link>https://nacharya.github.io/tags/shortcodes/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/shortcodes/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Text</title>
       <link>https://nacharya.github.io/tags/text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/text/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Emoji</title>
       <link>https://nacharya.github.io/tags/emoji/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
       <guid>https://nacharya.github.io/tags/emoji/</guid>
+      
       <description></description>
+      
     </item>
+    
   </channel>
 </rss>
