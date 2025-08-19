@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><head><meta charset="utf-8">
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,14 +18,14 @@
 <meta property="og:locale" content="en-us" />
 <meta name="language" content="en-us" />
 
-  <link rel="alternate" hreflang="en-us" href="https://nacharya.github.io/posts/gocontext/" title="English" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1314/posts/gocontext/" title="English" />
 
 
 
-  <meta itemprop="image" content="https://nacharya.github.io/" />
-  <meta property="og:image" content="https://nacharya.github.io/" />
-  <meta name="twitter:image" content="https://nacharya.github.io/" />
-  <meta name="twitter:image:src" content="https://nacharya.github.io/" />
+  <meta itemprop="image" content="http://localhost:1314/" />
+  <meta property="og:image" content="http://localhost:1314/" />
+  <meta name="twitter:image" content="http://localhost:1314/" />
+  <meta name="twitter:image:src" content="http://localhost:1314/" />
 
 
 
@@ -72,11 +72,12 @@
 
     
 
-    <link rel="canonical" href="https://nacharya.github.io/posts/gocontext/">
+    <link rel="canonical" href="http://localhost:1314/posts/gocontext/">
     <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
+    <link href="/css/mermaid.min.9ccf0fac2cbba6fabf39c855f755f7d585028e74488c3aece08e382577f83132.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
@@ -86,7 +87,7 @@
 
 
 
-<link rel="manifest" href="https://nacharya.github.io/site.webmanifest">
+<link rel="manifest" href="http://localhost:1314/site.webmanifest">
 
 <meta name="msapplication-config" content="/browserconfig.xml">
 <meta name="msapplication-TileColor" content="#2d89ef">
@@ -97,15 +98,101 @@
     
     <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
 
+    <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  
+  
+  function convertMermaidCodeBlocks() {
     
-    </head>
+    document.querySelectorAll('code.language-mermaid').forEach((codeBlock) => {
+      
+      const mermaidDiv = document.createElement('div');
+      mermaidDiv.classList.add('mermaid');
+      mermaidDiv.textContent = codeBlock.textContent;
+      
+      
+      const preElement = codeBlock.parentElement;
+      if (preElement && preElement.tagName === 'PRE') {
+        preElement.parentElement.replaceChild(mermaidDiv, preElement);
+      }
+    });
+  }
+
+  
+  function initializeMermaid() {
+    const theme = 'dark' === 'dark' ? 'dark' : 
+                  ('dark' === 'auto' && 
+                   window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'base';
+    
+    mermaid.initialize({ 
+      startOnLoad: false,
+      theme: theme,
+      securityLevel: 'loose',
+      fontFamily: 'Roboto, Arial, sans-serif',
+      fontSize: '24px',
+      themeVariables: {
+        fontSize: '24px',
+        fontFamily: 'Roboto, Arial, sans-serif',
+        primaryColor: theme === 'dark' ? '#2196f3' : '#1976d2',
+        primaryTextColor: '#ffffff',
+        primaryBorderColor: theme === 'dark' ? '#1565c0' : '#0d47a1',
+        lineColor: theme === 'dark' ? '#babdc4' : '#333333',
+        secondaryColor: theme === 'dark' ? '#4caf50' : '#388e3c',
+        tertiaryColor: theme === 'dark' ? '#ff9800' : '#f57c00',
+        background: 'transparent',
+        mainBkg: 'transparent',
+        secondBkg: 'transparent',
+        tertiaryBkg: 'transparent'
+      },
+      flowchart: {
+        useMaxWidth: false,
+        htmlLabels: true,
+        nodeSpacing: 80,
+        rankSpacing: 100,
+        curve: 'basis'
+      }
+    });
+  }
+
+  
+  function processMermaid() {
+    convertMermaidCodeBlocks();
+    mermaid.run();
+  }
+
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeMermaid();
+      processMermaid();
+    });
+  } else {
+    initializeMermaid();
+    processMermaid();
+  }
+
+  
+  if ('dark' === 'auto') {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const updateTheme = (e) => {
+      initializeMermaid();
+      
+      document.querySelectorAll('.mermaid').forEach((element) => {
+        element.removeAttribute('data-processed');
+      });
+      mermaid.run();
+    };
+    
+    mediaQuery.addListener(updateTheme);
+  }
+</script></head>
 <body data-theme = "dark" class="notransition">
 
-<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+<script src="/js/theme.js"></script>
 
 <div class="navbar" role="navigation">
     <nav class="menu" aria-label="Main Navigation">
-        <a href="https://nacharya.github.io/" class="logo">
+        <a href="http://localhost:1314/" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
 stroke-linejoin="round" class="feather feather-home">
@@ -433,7 +520,7 @@ It then prints the message received in the channel</p>
 
 
     
-    <script src="https://nacharya.github.io/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+    <script async src="http://localhost:1314/js/main.js" ></script>
 
     
 

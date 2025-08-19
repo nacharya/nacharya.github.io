@@ -2,17 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on N Acharya</title>
-    <link>https://nacharya.github.io/posts/</link>
+    <link>http://localhost:1314/posts/</link>
     <description>Recent content in Posts on N Acharya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Mar 2025 18:18:15 -0700</lastBuildDate><atom:link href="https://nacharya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Aug 2025 20:14:47 -0700</lastBuildDate><atom:link href="http://localhost:1314/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NVMe, Modern I/O and scalable KV stores</title>
+      <link>http://localhost:1314/posts/nvme_perf/</link>
+      <pubDate>Mon, 18 Aug 2025 20:14:47 -0700</pubDate>
+      
+      <guid>http://localhost:1314/posts/nvme_perf/</guid>
+      
+      <description>&lt;h1 id=&#34;nvme-modern-io-and-scalable-databases-building-the-next-generation-kv-stores&#34;&gt;NVMe, Modern I/O, and Scalable Databases: Building the Next-Generation KV Stores&lt;/h1&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;The landscape of high-performance storage has shifted fundamentally. NVMe SSDs deliver microsecond latency
+and multi-GB/s throughput per device, shifting bottlenecks from disk mechanics to CPU, PCIe fabrics,
+and software stacks. For modern KV stores, this means &lt;strong&gt;rethinking metadata vs. data storage separation&lt;/strong&gt;,
+&lt;strong&gt;embracing async APIs (&lt;code&gt;io_uring&lt;/code&gt;)&lt;/strong&gt;, and &lt;strong&gt;leveraging kernel-bypass frameworks (DPDK/SPDK)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;With the right architecture, we can scale from a single workstation-class box to cloud-scale,
+NVMe-oF powered disaggregated storage.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Why Rust ?</title>
-      <link>https://nacharya.github.io/posts/why_rust/</link>
+      <link>http://localhost:1314/posts/why_rust/</link>
       <pubDate>Sat, 15 Mar 2025 18:18:15 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/posts/why_rust/</guid>
+      <guid>http://localhost:1314/posts/why_rust/</guid>
       
       <description>&lt;p&gt;It&amp;rsquo;s a question that I&amp;rsquo;ve been asked a lot lately, and I think it&amp;rsquo;s worth looking into.
 Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
@@ -24,10 +42,10 @@ It is the most admired language in &lt;a href=&#34;https://survey.stackoverflow.
     
     <item>
       <title>uv: Package, Project, Dependency, Environment</title>
-      <link>https://nacharya.github.io/posts/uv/</link>
+      <link>http://localhost:1314/posts/uv/</link>
       <pubDate>Thu, 13 Mar 2025 22:55:28 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/posts/uv/</guid>
+      <guid>http://localhost:1314/posts/uv/</guid>
       
       <description>&lt;p&gt;Finally we have a really good package, project, dependency and environment management tool for Python.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;uv&lt;/code&gt; is a Python package, dependency and environment management tool. It is a good replacement for
@@ -40,11 +58,50 @@ one.&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Testing Mermaid Diagrams</title>
+      <link>http://localhost:1314/posts/mermaid-test/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/posts/mermaid-test/</guid>
+      
+      <description>&lt;p&gt;This post demonstrates how to use Mermaid diagrams in your Hugo site. There are two ways to include Mermaid diagrams:&lt;/p&gt;
+&lt;h2 id=&#34;method-1-using-code-fences&#34;&gt;Method 1: Using Code Fences&lt;/h2&gt;
+&lt;p&gt;You can use standard markdown code fences with the &lt;code&gt;mermaid&lt;/code&gt; language identifier:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD;
+    A--&amp;gt;B;
+    A--&amp;gt;C;
+    B--&amp;gt;D;
+    C--&amp;gt;D;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;method-2-using-the-mermaid-shortcode&#34;&gt;Method 2: Using the Mermaid Shortcode&lt;/h2&gt;
+&lt;p&gt;You can also use the custom shortcode:&lt;/p&gt;
+
+&lt;div class=&#34;mermaid&#34;&gt;
+
+sequenceDiagram
+participant Alice
+participant Bob
+Alice-&gt;&gt;John: Hello John, how are you?
+loop Healthcheck
+John-&gt;&gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts prevail!
+John--&gt;&gt;Alice: Great!
+John-&gt;&gt;Bob: How about you?
+Bob--&gt;&gt;John: Jolly good!
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;more-complex-example&#34;&gt;More Complex Example&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a more complex flowchart:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Rust Language: Features</title>
-      <link>https://nacharya.github.io/posts/rust_lang/</link>
+      <link>http://localhost:1314/posts/rust_lang/</link>
       <pubDate>Mon, 24 Jun 2024 14:17:00 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/posts/rust_lang/</guid>
+      <guid>http://localhost:1314/posts/rust_lang/</guid>
       
       <description>&lt;h2 id=&#34;rust--a-rock-solid-programming-language&#34;&gt;Rust : A rock solid programming language&lt;/h2&gt;
 &lt;p&gt;Rust is a great fresh look at the programming world. It has gained
@@ -70,10 +127,10 @@ language&lt;/p&gt;</description>
     
     <item>
       <title>LLM</title>
-      <link>https://nacharya.github.io/posts/llm/</link>
+      <link>http://localhost:1314/posts/llm/</link>
       <pubDate>Tue, 24 Oct 2023 11:50:56 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/posts/llm/</guid>
+      <guid>http://localhost:1314/posts/llm/</guid>
       
       <description>&lt;h2 id=&#34;scope&#34;&gt;Scope&lt;/h2&gt;
 &lt;p&gt;Given there is so much information available in the Internet on Generative AI, let&amp;rsquo;s keep this brief and to the point of relevant topics.&lt;/p&gt;
@@ -86,10 +143,10 @@ language&lt;/p&gt;</description>
     
     <item>
       <title>Go: Contexts, Channels &amp; Goroutines</title>
-      <link>https://nacharya.github.io/posts/gocontext/</link>
+      <link>http://localhost:1314/posts/gocontext/</link>
       <pubDate>Thu, 28 Sep 2023 14:36:37 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/posts/gocontext/</guid>
+      <guid>http://localhost:1314/posts/gocontext/</guid>
       
       <description>&lt;h2 id=&#34;go-contexts-channels--goroutines&#34;&gt;Go: Contexts, Channels &amp;amp; Goroutines&lt;/h2&gt;
 &lt;h3 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h3&gt;
@@ -100,10 +157,10 @@ language&lt;/p&gt;</description>
     
     <item>
       <title>AI AI AI</title>
-      <link>https://nacharya.github.io/posts/ai-init/</link>
+      <link>http://localhost:1314/posts/ai-init/</link>
       <pubDate>Mon, 14 Aug 2023 23:24:20 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/posts/ai-init/</guid>
+      <guid>http://localhost:1314/posts/ai-init/</guid>
       
       <description>&lt;h2 id=&#34;ai-ai-ai--the-many-different-areas--and-growing&#34;&gt;AI, AI, AI &amp;hellip;&amp;hellip;.. the many different areas &amp;hellip;. and growing!&lt;/h2&gt;
 &lt;p&gt;One of the key achievements of AI is the rise of &lt;code&gt;Human Productivity&lt;/code&gt;. One of the best
@@ -116,10 +173,10 @@ to stay on top of the latest research in this field.&lt;/p&gt;</description>
     
     <item>
       <title>Generics in the Go Language</title>
-      <link>https://nacharya.github.io/posts/genericsgo/</link>
+      <link>http://localhost:1314/posts/genericsgo/</link>
       <pubDate>Tue, 21 Dec 2021 14:37:03 -0800</pubDate>
       
-      <guid>https://nacharya.github.io/posts/genericsgo/</guid>
+      <guid>http://localhost:1314/posts/genericsgo/</guid>
       
       <description>&lt;h2 id=&#34;generics-in-go&#34;&gt;Generics in Go&lt;/h2&gt;
 &lt;p&gt;Some well known documents from the past&lt;/p&gt;
@@ -142,10 +199,10 @@ The Golang team is hard at work on Golang 1.18, which will be released in Februa
     
     <item>
       <title>Data Analytics Links</title>
-      <link>https://nacharya.github.io/posts/data-analytics/</link>
+      <link>http://localhost:1314/posts/data-analytics/</link>
       <pubDate>Sat, 27 Nov 2021 15:30:09 -0800</pubDate>
       
-      <guid>https://nacharya.github.io/posts/data-analytics/</guid>
+      <guid>http://localhost:1314/posts/data-analytics/</guid>
       
       <description>&lt;h2 id=&#34;some-of-the-most-useful-courses-online&#34;&gt;Some of the most useful courses online&lt;/h2&gt;
 &lt;ul&gt;
@@ -163,10 +220,10 @@ Have found the Berkeley courses to be good in terms of practicality.&lt;/p&gt;</
     
     <item>
       <title>Python 3.10</title>
-      <link>https://nacharya.github.io/posts/p310/</link>
+      <link>http://localhost:1314/posts/p310/</link>
       <pubDate>Sat, 27 Nov 2021 14:21:32 -0800</pubDate>
       
-      <guid>https://nacharya.github.io/posts/p310/</guid>
+      <guid>http://localhost:1314/posts/p310/</guid>
       
       <description>&lt;h2 id=&#34;python-310-is-here&#34;&gt;Python 3.10 is here&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.python.org/downloads/release/python-3100/&#34;&gt;Python 3.10&lt;/a&gt; is now released. It has a few features worth talking about. Some of these features never existed before in Python (surprisingly!)&lt;/p&gt;
@@ -180,10 +237,10 @@ use patterns of your definition. Standard pattern matching is very literal and l
     
     <item>
       <title>WSLv2 and Windows 10 Pro</title>
-      <link>https://nacharya.github.io/posts/wsl/</link>
+      <link>http://localhost:1314/posts/wsl/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nacharya.github.io/posts/wsl/</guid>
+      <guid>http://localhost:1314/posts/wsl/</guid>
       
       <description>&lt;h2 id=&#34;installing-wslv2-on-windows-and-using-linux-natively-on-windows&#34;&gt;Installing WSLv2 on Windows and using Linux natively on Windows&lt;/h2&gt;
 &lt;h3 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h3&gt;
@@ -202,10 +259,10 @@ patches: &lt;a href=&#34;https://support.microsoft.com/en-us/help/4566116/window
     
     <item>
       <title>Markdown Syntax Guide for writing markdown content</title>
-      <link>https://nacharya.github.io/posts/markdown-syntax/</link>
+      <link>http://localhost:1314/posts/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nacharya.github.io/posts/markdown-syntax/</guid>
+      <guid>http://localhost:1314/posts/markdown-syntax/</guid>
       
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
       
@@ -213,10 +270,10 @@ patches: &lt;a href=&#34;https://support.microsoft.com/en-us/help/4566116/window
     
     <item>
       <title>Rich Content within Markdown using Hugo shortcodes</title>
-      <link>https://nacharya.github.io/posts/rich-content/</link>
+      <link>http://localhost:1314/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nacharya.github.io/posts/rich-content/</guid>
+      <guid>http://localhost:1314/posts/rich-content/</guid>
       
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
       
@@ -224,10 +281,10 @@ patches: &lt;a href=&#34;https://support.microsoft.com/en-us/help/4566116/window
     
     <item>
       <title>Placeholder Text</title>
-      <link>https://nacharya.github.io/posts/placeholder-text/</link>
+      <link>http://localhost:1314/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nacharya.github.io/posts/placeholder-text/</guid>
+      <guid>http://localhost:1314/posts/placeholder-text/</guid>
       
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
       
@@ -235,10 +292,10 @@ patches: &lt;a href=&#34;https://support.microsoft.com/en-us/help/4566116/window
     
     <item>
       <title>Math Typesetting for Math Equations in Markdown</title>
-      <link>https://nacharya.github.io/posts/math-typesetting/</link>
+      <link>http://localhost:1314/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nacharya.github.io/posts/math-typesetting/</guid>
+      <guid>http://localhost:1314/posts/math-typesetting/</guid>
       
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
       
@@ -246,10 +303,10 @@ patches: &lt;a href=&#34;https://support.microsoft.com/en-us/help/4566116/window
     
     <item>
       <title>Emoji Support using Hugo shortcodes</title>
-      <link>https://nacharya.github.io/posts/emoji-support/</link>
+      <link>http://localhost:1314/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nacharya.github.io/posts/emoji-support/</guid>
+      <guid>http://localhost:1314/posts/emoji-support/</guid>
       
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
       

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Articles on N Acharya</title>
-    <link>https://nacharya.github.io/articles/</link>
+    <link>http://localhost:1314/articles/</link>
     <description>Recent content in Articles on N Acharya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Mar 2025 18:12:46 -0700</lastBuildDate><atom:link href="https://nacharya.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Mar 2025 18:12:46 -0700</lastBuildDate><atom:link href="http://localhost:1314/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stay Ambitious, and Stay Humble</title>
-      <link>https://nacharya.github.io/articles/newleaderhip/</link>
+      <link>http://localhost:1314/articles/newleaderhip/</link>
       <pubDate>Mon, 17 Mar 2025 18:12:46 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/articles/newleaderhip/</guid>
+      <guid>http://localhost:1314/articles/newleaderhip/</guid>
       
       <description>&lt;p&gt;Given how AI has changed the scope of the Knowledge-Intensive Occupations,
 the leadership of the future will need to be more adaptive , flexible and creative.&lt;/p&gt;
@@ -25,10 +25,10 @@ change coming.&lt;/p&gt;
     
     <item>
       <title>Top 5 Software Architectural Patterns</title>
-      <link>https://nacharya.github.io/articles/top5/</link>
+      <link>http://localhost:1314/articles/top5/</link>
       <pubDate>Thu, 16 Nov 2023 10:22:22 -0800</pubDate>
       
-      <guid>https://nacharya.github.io/articles/top5/</guid>
+      <guid>http://localhost:1314/articles/top5/</guid>
       
       <description>&lt;h2 id=&#34;top-5-software-architectural-patterns&#34;&gt;Top 5 Software Architectural patterns&lt;/h2&gt;
 &lt;p&gt;Software Architectures are the foundations to Software systems. Choice and correct use of
@@ -43,16 +43,16 @@ to each other layer it is adjacent to.&lt;/p&gt;
 &lt;li&gt;Persistence Layer&lt;/li&gt;
 &lt;li&gt;Database Layer&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://nacharya.github.io/images/layered_pic.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;http://localhost:1314/images/layered_pic.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Spirit Mind Body</title>
-      <link>https://nacharya.github.io/articles/spirit-mind-body/</link>
+      <link>http://localhost:1314/articles/spirit-mind-body/</link>
       <pubDate>Tue, 14 Mar 2023 16:46:13 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/articles/spirit-mind-body/</guid>
+      <guid>http://localhost:1314/articles/spirit-mind-body/</guid>
       
       <description>&lt;h2 id=&#34;spirit&#34;&gt;Spirit&lt;/h2&gt;
 &lt;p&gt;Humans need &lt;code&gt;spirit&lt;/code&gt;  well above their mind and body. Some people call it &lt;code&gt;Religion&lt;/code&gt;,
@@ -65,10 +65,10 @@ beliefs, rational scientific explanations &amp;ndash; and &amp;ndash; realized t
     
     <item>
       <title>Architecture: What is it ? why do we care ?</title>
-      <link>https://nacharya.github.io/articles/architecture/</link>
+      <link>http://localhost:1314/articles/architecture/</link>
       <pubDate>Sat, 18 Jul 2020 16:48:41 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/articles/architecture/</guid>
+      <guid>http://localhost:1314/articles/architecture/</guid>
       
       <description>&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
 &lt;p&gt;So what is &lt;code&gt;Architecture&lt;/code&gt; ? As a kid , I only saw that everyone ties in the word Architecture to Buildings and Physical Structures that somehow captures human emotions intellectually.&lt;/p&gt;
@@ -81,10 +81,10 @@ Here are some assumptions on the definition of the word &lt;code&gt;Architecture
     
     <item>
       <title>The Three Pillars: Foundational Belief</title>
-      <link>https://nacharya.github.io/articles/the_three_pillars/</link>
+      <link>http://localhost:1314/articles/the_three_pillars/</link>
       <pubDate>Fri, 09 Feb 2018 13:49:42 -0700</pubDate>
       
-      <guid>https://nacharya.github.io/articles/the_three_pillars/</guid>
+      <guid>http://localhost:1314/articles/the_three_pillars/</guid>
       
       <description>&lt;h2 id=&#34;the-three-pillars-foundational-belief&#34;&gt;The Three Pillars: Foundational Belief&lt;/h2&gt;
 &lt;p&gt;Having spent many years working in the IT industry, here are some foundational pillars that have helped me all along. The industry is ever evolving and always progressing. With the rise of the internet in the &amp;rsquo;90s came the &lt;code&gt;Internet Landslide&lt;/code&gt; of information and thus came the challenge of traversing this landslide&lt;/p&gt;

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">NVMe, Modern I/O and scalable KV stores | N Acharya</title>
+<meta property="og:title" content="NVMe, Modern I/O and scalable KV stores | N Acharya" />
+<meta name="twitter:title" content="NVMe, Modern I/O and scalable KV stores | N Acharya" />
+<meta itemprop="name" content="NVMe, Modern I/O and scalable KV stores | N Acharya" />
+<meta name="application-name" content="NVMe, Modern I/O and scalable KV stores | N Acharya" />
+<meta property="og:site_name" content="N Acharya" />
+
+<meta name="description" content="Exploring the architecture of next-gen key-value stores using NVMe, io_uring, and ScyllaDB">
+<meta itemprop="description" content="Exploring the architecture of next-gen key-value stores using NVMe, io_uring, and ScyllaDB" />
+<meta property="og:description" content="Exploring the architecture of next-gen key-value stores using NVMe, io_uring, and ScyllaDB" />
+<meta name="twitter:description" content="Exploring the architecture of next-gen key-value stores using NVMe, io_uring, and ScyllaDB" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1314/posts/nvme_perf/" title="English" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1314/" />
+  <meta property="og:image" content="http://localhost:1314/" />
+  <meta name="twitter:image" content="http://localhost:1314/" />
+  <meta name="twitter:image:src" content="http://localhost:1314/" />
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-08-18T20:14:47-0700 />
+    <meta property="article:published_time" content=2025-08-18T20:14:47-0700 />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "NVMe, Modern I/O and scalable KV stores",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-08-18",
+        "description": "Exploring the architecture of next-gen key-value stores using NVMe, io_uring, and ScyllaDB",
+        "wordCount":  928 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-08-18",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "N Acharya"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.148.2">
+
+    
+
+    <link rel="canonical" href="http://localhost:1314/posts/nvme_perf/">
+    <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link href="/css/mermaid.min.9ccf0fac2cbba6fabf39c855f755f7d585028e74488c3aece08e382577f83132.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1314/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6776231617194991" 
+              crossorigin="anonymous"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  
+  
+  function convertMermaidCodeBlocks() {
+    
+    document.querySelectorAll('code.language-mermaid').forEach((codeBlock) => {
+      
+      const mermaidDiv = document.createElement('div');
+      mermaidDiv.classList.add('mermaid');
+      mermaidDiv.textContent = codeBlock.textContent;
+      
+      
+      const preElement = codeBlock.parentElement;
+      if (preElement && preElement.tagName === 'PRE') {
+        preElement.parentElement.replaceChild(mermaidDiv, preElement);
+      }
+    });
+  }
+
+  
+  function initializeMermaid() {
+    const theme = 'dark' === 'dark' ? 'dark' : 
+                  ('dark' === 'auto' && 
+                   window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'base';
+    
+    mermaid.initialize({ 
+      startOnLoad: false,
+      theme: theme,
+      securityLevel: 'loose',
+      fontFamily: 'Roboto, Arial, sans-serif',
+      fontSize: '24px',
+      themeVariables: {
+        fontSize: '24px',
+        fontFamily: 'Roboto, Arial, sans-serif',
+        primaryColor: theme === 'dark' ? '#2196f3' : '#1976d2',
+        primaryTextColor: '#ffffff',
+        primaryBorderColor: theme === 'dark' ? '#1565c0' : '#0d47a1',
+        lineColor: theme === 'dark' ? '#babdc4' : '#333333',
+        secondaryColor: theme === 'dark' ? '#4caf50' : '#388e3c',
+        tertiaryColor: theme === 'dark' ? '#ff9800' : '#f57c00',
+        background: 'transparent',
+        mainBkg: 'transparent',
+        secondBkg: 'transparent',
+        tertiaryBkg: 'transparent'
+      },
+      flowchart: {
+        useMaxWidth: false,
+        htmlLabels: true,
+        nodeSpacing: 80,
+        rankSpacing: 100,
+        curve: 'basis'
+      }
+    });
+  }
+
+  
+  function processMermaid() {
+    convertMermaidCodeBlocks();
+    mermaid.run();
+  }
+
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeMermaid();
+      processMermaid();
+    });
+  } else {
+    initializeMermaid();
+    processMermaid();
+  }
+
+  
+  if ('dark' === 'auto') {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const updateTheme = (e) => {
+      initializeMermaid();
+      
+      document.querySelectorAll('.mermaid').forEach((element) => {
+        element.removeAttribute('data-processed');
+      });
+      mermaid.run();
+    };
+    
+    mediaQuery.addListener(updateTheme);
+  }
+</script></head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1314/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/articles/">
+                        Articles
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">NVMe, Modern I/O and scalable KV stores</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-08-18T20:14:47-07:00" itemprop="datePublished"> Aug 18, 2025 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tldr">TL;DR</a></li>
+    <li><a href="#why-lmdb-for-metadata">Why LMDB for metadata?</a></li>
+    <li><a href="#why-scylla-for-scalable-data">Why Scylla for scalable data?</a></li>
+    <li><a href="#modern-io-advantages-io_uring-dpdk-spdk">Modern I/O advantages: io_uring, DPDK, SPDK</a>
+      <ul>
+        <li><a href="#1-io_uring">1. io_uring</a></li>
+        <li><a href="#2-dpdk-data-plane-development-kit">2. DPDK (Data Plane Development Kit)</a></li>
+        <li><a href="#3-spdk-storage-performance-development-kit">3. SPDK (Storage Performance Development Kit)</a></li>
+      </ul>
+    </li>
+    <li><a href="#practical-design-for-a-kv--scylla-system">Practical design for a KV + Scylla system</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#architecture-diagram-mermaid">Architecture Diagram (Mermaid)</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h1 id="nvme-modern-io-and-scalable-databases-building-the-next-generation-kv-stores">NVMe, Modern I/O, and Scalable Databases: Building the Next-Generation KV Stores</h1>
+<h2 id="tldr">TL;DR</h2>
+<p>The landscape of high-performance storage has shifted fundamentally. NVMe SSDs deliver microsecond latency
+and multi-GB/s throughput per device, shifting bottlenecks from disk mechanics to CPU, PCIe fabrics,
+and software stacks. For modern KV stores, this means <strong>rethinking metadata vs. data storage separation</strong>,
+<strong>embracing async APIs (<code>io_uring</code>)</strong>, and <strong>leveraging kernel-bypass frameworks (DPDK/SPDK)</strong>.</p>
+<p>With the right architecture, we can scale from a single workstation-class box to cloud-scale,
+NVMe-oF powered disaggregated storage.</p>
+<hr>
+<h2 id="why-lmdb-for-metadata">Why LMDB for metadata?</h2>
+<p>For KV systems, LMDB (Lightning Memory-Mapped Database) shines as a <strong>lightweight, ACID-compliant metadata store</strong>. By using LMDB primarily for <strong>metadata (keys, object references, namespace catalogs)</strong> and <strong>not for storing user data itself</strong>, we sidestep the <code>mmap</code> pitfalls identified in CIDR’22.</p>
+<ul>
+<li>LMDB works as a reliable catalog and reference index.</li>
+<li>Data payloads are stored elsewhere (e.g., object files, log-structured segments, or Scylla tables).</li>
+<li>This avoids buffer pool replacement complexity since metadata is small and access patterns are more index-like.</li>
+</ul>
+<p>In this hybrid design, LMDB is the “brain,” Scylla (or another large-scale DB) is the “backbone,” and
+raw NVMe-backed data segments hold the actual payloads.</p>
+<hr>
+<h2 id="why-scylla-for-scalable-data">Why Scylla for scalable data?</h2>
+<p>ScyllaDB, a <strong>C++ rewrite of Apache Cassandra</strong>, is optimized for <strong>shard-per-core execution</strong> and takes
+advantage of <strong>NUMA locality</strong>. With NVMe drives:</p>
+<ul>
+<li>Each shard can map directly to a queue on the NVMe device.</li>
+<li>Writes and reads are parallelized without global locks.</li>
+<li>Latency stays predictable at high throughput thanks to Scylla’s event-driven scheduling model.</li>
+</ul>
+<p>For massive datasets, Scylla provides distribution, replication, and failover that complement LMDB’s role as a fast, local metadata manager.</p>
+<hr>
+<h2 id="modern-io-advantages-io_uring-dpdk-spdk">Modern I/O advantages: io_uring, DPDK, SPDK</h2>
+<h3 id="1-io_uring">1. io_uring</h3>
+<ul>
+<li>Shared submission/completion queues drastically cut syscall overhead.</li>
+<li>Registered buffers and files eliminate repeated setup costs.</li>
+<li><code>SQPOLL</code> (submission queue polling) and <code>IOPOLL</code> enable ultra-low-latency paths.</li>
+<li>Ideal for <strong>KV store engines</strong>, where thousands of small random I/O operations must stay efficient.</li>
+</ul>
+<h3 id="2-dpdk-data-plane-development-kit">2. DPDK (Data Plane Development Kit)</h3>
+<ul>
+<li>Removes kernel overhead from the <strong>networking path</strong>.</li>
+<li>Paired with NVMe-oF (TCP/RDMA), DPDK ensures <strong>network throughput matches storage throughput</strong>.</li>
+<li>Critical when scaling beyond a single host to disaggregated NVMe pools.</li>
+</ul>
+<h3 id="3-spdk-storage-performance-development-kit">3. SPDK (Storage Performance Development Kit)</h3>
+<ul>
+<li>Moves NVMe I/O to user space with polled-mode drivers.</li>
+<li>Ideal for scenarios where <strong>every microsecond matters</strong> (e.g., hot data, transactional KV workloads).</li>
+<li>Enables building user-space storage services that can act as high-performance block or object backends for Scylla or custom engines.</li>
+</ul>
+<hr>
+<h2 id="practical-design-for-a-kv--scylla-system">Practical design for a KV + Scylla system</h2>
+<ol>
+<li>
+<p><strong>Metadata path</strong></p>
+<ul>
+<li>LMDB handles namespaces, file/record references, small metadata records.</li>
+<li>Transactions stay light, low-latency, and resilient.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data path</strong></p>
+<ul>
+<li>Large values and user objects go directly into ScyllaDB tables (sharded across cores and nodes).</li>
+<li>Scylla handles replication, compaction, and scaling.</li>
+</ul>
+</li>
+<li>
+<p><strong>I/O path</strong></p>
+<ul>
+<li>Use <code>io_uring</code> for kernel-managed async I/O.</li>
+<li>For critical hot-path latency, use SPDK (NVMe polled drivers).</li>
+<li>For remote/disaggregated deployments, layer <strong>NVMe-oF over DPDK</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Scaling out</strong></p>
+<ul>
+<li>On a single box: NVMe drives + io_uring saturate local IOPS and bandwidth.</li>
+<li>Across racks: NVMe-oF with DPDK ensures distributed nodes don’t bottleneck on networking.</li>
+<li>The software stack remains consistent: LMDB for metadata, Scylla for large-scale data, SPDK/DPDK for ultra-low-latency data planes.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>By combining:</p>
+<ul>
+<li><strong>LMDB for metadata</strong>,</li>
+<li><strong>Scylla for distributed scalability</strong>, and</li>
+<li><strong>NVMe + io_uring/DPDK/SPDK for I/O efficiency</strong>,</li>
+</ul>
+<p>we align system architecture with the realities of modern storage hardware. NVMe SSDs remove traditional disk bottlenecks; now, system scalability depends on eliminating kernel overheads, aligning data structures to hardware queues, and using databases suited for multi-core and NUMA scaling. This blueprint ensures the KV store layer remains both <strong>highly performant and operationally scalable</strong>.</p>
+<hr>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://arxiv.org/pdf/2102.11198">arXiv: Reading from External Memory (Savchenko, 2021)</a> — Survey of HDD, SATA, NVMe, and Optane performance; benchmarks of Linux I/O APIs.</li>
+<li><a href="https://tanelpoder.com/posts/11m-iops-with-10-ssds-on-amd-threadripper-pro-workstation/">Tanel Poder: 11M IOPS with 10 SSDs on Threadripper Pro</a> — Real-world workstation benchmark showing limits are CPU/PCIe, not disks.</li>
+<li><a href="https://db.cs.cmu.edu/mmap-cidr2022/">CIDR 2022: Are You Sure You Want to Use mmap in Your DBMS?</a> — Paper showing why mmap fails for DBMS buffer pools; recommends explicit buffer management.</li>
+<li><a href="https://kernel.dk/io_uring.pdf">Jens Axboe: Efficient IO with io_uring</a> — Detailed description of Linux <code>io_uring</code>, design, and performance advantages.</li>
+</ul>
+<hr>
+<h2 id="architecture-diagram-mermaid">Architecture Diagram (Mermaid)</h2>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">%%{init: {&#39;theme&#39;:&#39;base&#39;, &#39;themeVariables&#39;: {&#39;fontSize&#39;:&#39;24px&#39;, &#39;fontFamily&#39;:&#39;Roboto, Arial, sans-serif&#39;, &#39;primaryColor&#39;:&#39;#ffffff&#39;, &#39;primaryTextColor&#39;:&#39;#000000&#39;, &#39;primaryBorderColor&#39;:&#39;#333333&#39;, &#39;lineColor&#39;:&#39;#333333&#39;}, &#39;flowchart&#39;: {&#39;nodeSpacing&#39;: 80, &#39;rankSpacing&#39;: 100}}}%%
+flowchart LR
+  %% Top-level: Client apps use a KV service
+  A[&#34;🖥️ Client Apps&lt;br/&gt;REST/gRPC APIs&#34;] --&gt; B[&#34;⚡ KV Service / API&lt;br/&gt;Request Router&#34;]
+
+  %% Metadata path
+  B --&gt; M[(&#34;💾 LMDB&lt;br/&gt;Metadata Catalog&lt;br/&gt;Keys &amp; References&#34;)]
+
+  %% Value routing: small vs. large
+  B --&gt;|&#34;🔍 value lookup&#34;| R{&#34;📊 Value Type?&lt;br/&gt;Size Check&#34;}
+  R --&gt;|&#34;📝 small/metadata-only&#34;| M
+  R --&gt;|&#34;🗂️ large value&#34;| SD[&#34;🔌 Scylla Client/Driver&lt;br/&gt;Distributed Access&#34;]
+
+  %% Local I/O paths on the KV host
+  subgraph LIO[&#34;🏠 Local NVMe I/O on KV Host&#34;]
+    direction TB
+    UR[&#34;⚙️ io_uring&lt;br/&gt;Kernel Async I/O&lt;br/&gt;High Performance&#34;] --&gt; NV[(&#34;💽 Local NVMe SSDs&lt;br/&gt;Ultra-Low Latency&lt;br/&gt;Multi-GB/s&#34;)]
+    SP[&#34;🚀 SPDK NVMe&lt;br/&gt;User-Space Polled&lt;br/&gt;Microsecond Access&#34;] --&gt; NV
+  end
+
+  %% Scylla cluster path for large values
+  SD --&gt; SC[[&#34;🌐 Scylla Cluster&lt;br/&gt;Shard-per-Core&lt;br/&gt;Distributed Storage&#34;]]
+
+  %% Optional disaggregation over SPDK LAN (NVMe-oF)
+  subgraph NET[&#34;🌍 SPDK LAN / NVMe-oF Fabric&#34;]
+    direction TB
+    INI[&#34;📡 DPDK + NVMe-oF&lt;br/&gt;Initiator&lt;br/&gt;Network Acceleration&#34;] --- TGT[&#34;🎯 SPDK NVMe-oF&lt;br/&gt;Target&lt;br/&gt;Remote Access&#34;]
+  end
+
+  %% Remote NVMe target
+  TGT --&gt; RNV[(&#34;🌐 Remote NVMe SSDs&lt;br/&gt;Disaggregated Storage&lt;br/&gt;Scale-Out Capacity&#34;)]
+
+  %% Wiring optional remote path
+  B -.-&gt;|&#34;🔥 optional hot path&#34;| INI
+  INI -.-&gt;|&#34;🔗 block access&#34;| RNV
+
+  %% Enhanced styling with bigger fonts and larger nodes
+  classDef comp fill:#2196f3,stroke:#1565c0,stroke-width:4px,color:#ffffff,font-size:20px,font-weight:bold;
+  classDef store fill:#4caf50,stroke:#2e7d32,stroke-width:4px,color:#ffffff,font-size:20px,font-weight:bold;
+  classDef fabric fill:#ff9800,stroke:#ef6c00,stroke-width:4px,color:#ffffff,font-size:20px,font-weight:bold;
+  classDef decision fill:#9c27b0,stroke:#6a1b9a,stroke-width:4px,color:#ffffff,font-size:20px,font-weight:bold;
+
+  class A,B,M,SD,UR,SP,INI,TGT,SC comp;
+  class NV,RNV store;
+  class NET,LIO fabric;
+  class R decision;
+</code></pre><p><strong>Legend</strong></p>
+<ul>
+<li><strong>LMDB</strong> holds <em>metadata only</em> (namespaces, object refs, indexes).</li>
+<li><strong>Scylla</strong> stores <em>large values</em> and handles sharding/replication.</li>
+<li><strong>io_uring</strong> = default async I/O path to local NVMe.</li>
+<li><strong>SPDK</strong> = user-space polled drivers for ultra-low-latency NVMe; also powers <strong>NVMe-oF</strong> targets on the <strong>SPDK LAN</strong>.</li>
+<li><strong>DPDK</strong> accelerates the network dataplane for NVMe-oF initiators/targets.</li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/nacharya" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="mailto:nabin.acharya@gmail.com" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2025 N Acharya.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6776231617194991" 
+              crossorigin="anonymous"></script>
+
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1314/js/main.js" ></script>
+
+    
+
+</body>
+</html>

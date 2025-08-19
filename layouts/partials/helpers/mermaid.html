@@ -1,0 +1,91 @@
+{{/* Mermaid diagram support */}}
+{{- if or .Params.mermaid .Site.Params.mermaid -}}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  
+  // Function to convert code blocks to mermaid diagrams
+  function convertMermaidCodeBlocks() {
+    // Find all code blocks with language-mermaid class
+    document.querySelectorAll('code.language-mermaid').forEach((codeBlock) => {
+      // Create a new div element for mermaid
+      const mermaidDiv = document.createElement('div');
+      mermaidDiv.classList.add('mermaid');
+      mermaidDiv.textContent = codeBlock.textContent;
+      
+      // Replace the pre > code structure with just the mermaid div
+      const preElement = codeBlock.parentElement;
+      if (preElement && preElement.tagName === 'PRE') {
+        preElement.parentElement.replaceChild(mermaidDiv, preElement);
+      }
+    });
+  }
+
+  // Initialize Mermaid with configuration
+  function initializeMermaid() {
+    const theme = '{{ .Site.Params.defaultColor | default "auto" }}' === 'dark' ? 'dark' : 
+                  ('{{ .Site.Params.defaultColor | default "auto" }}' === 'auto' && 
+                   window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'base';
+    
+    mermaid.initialize({ 
+      startOnLoad: false,
+      theme: theme,
+      securityLevel: 'loose',
+      fontFamily: 'Roboto, Arial, sans-serif',
+      fontSize: '24px',
+      themeVariables: {
+        fontSize: '24px',
+        fontFamily: 'Roboto, Arial, sans-serif',
+        primaryColor: theme === 'dark' ? '#2196f3' : '#1976d2',
+        primaryTextColor: '#ffffff',
+        primaryBorderColor: theme === 'dark' ? '#1565c0' : '#0d47a1',
+        lineColor: theme === 'dark' ? '#babdc4' : '#333333',
+        secondaryColor: theme === 'dark' ? '#4caf50' : '#388e3c',
+        tertiaryColor: theme === 'dark' ? '#ff9800' : '#f57c00',
+        background: 'transparent',
+        mainBkg: 'transparent',
+        secondBkg: 'transparent',
+        tertiaryBkg: 'transparent'
+      },
+      flowchart: {
+        useMaxWidth: false,
+        htmlLabels: true,
+        nodeSpacing: 80,
+        rankSpacing: 100,
+        curve: 'basis'
+      }
+    });
+  }
+
+  // Process mermaid diagrams
+  function processMermaid() {
+    convertMermaidCodeBlocks();
+    mermaid.run();
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeMermaid();
+      processMermaid();
+    });
+  } else {
+    initializeMermaid();
+    processMermaid();
+  }
+
+  // Auto-detect theme changes for responsive theming
+  if ('{{ .Site.Params.defaultColor | default "auto" }}' === 'auto') {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const updateTheme = (e) => {
+      initializeMermaid();
+      // Re-render existing diagrams
+      document.querySelectorAll('.mermaid').forEach((element) => {
+        element.removeAttribute('data-processed');
+      });
+      mermaid.run();
+    };
+    
+    mediaQuery.addListener(updateTheme);
+  }
+</script>
+{{- end -}}

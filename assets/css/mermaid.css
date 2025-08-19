@@ -1,0 +1,145 @@
+/* Mermaid diagram styling with much larger size and fonts */
+.mermaid {
+  text-align: center;
+  margin: 3rem 0;
+  background: transparent;
+  display: block;
+  font-size: 24px !important;
+  width: 100%;
+  overflow-x: auto;
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+/* Ensure Mermaid diagrams are large and responsive */
+.mermaid svg {
+  max-width: none;
+  width: 100%;
+  min-width: 1200px;
+  height: auto;
+  min-height: 600px;
+  background: transparent;
+  font-size: 24px !important;
+}
+
+/* Force much larger text for all elements */
+.mermaid text {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  font-family: 'Roboto', 'Arial', sans-serif !important;
+}
+
+/* Even larger text for node labels */
+.mermaid .node-label {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+/* Larger edge labels with better visibility */
+.mermaid .edge-label {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  border: 2px solid #333 !important;
+}
+
+/* Much larger subgraph titles */
+.mermaid .subgraph-title {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+}
+
+/* Increase node sizes and padding */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  stroke-width: 4px !important;
+  rx: 8px !important;
+  ry: 8px !important;
+}
+
+/* Make all text elements much larger */
+.mermaid .nodeLabel,
+.mermaid .cluster-label,
+.mermaid .edgeLabel {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+/* Container adjustments for larger diagram */
+.mermaid-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 2rem 0;
+}
+
+/* Dark mode adjustments with larger fonts */
+@media (prefers-color-scheme: dark) {
+  .mermaid svg {
+    background: transparent;
+  }
+  
+  .mermaid .edge-label {
+    background-color: rgba(19, 20, 24, 0.95) !important;
+    color: #babdc4 !important;
+    border-color: #babdc4 !important;
+  }
+}
+
+/* Dark theme specific (for your site's dark theme) */
+html:not(.light) .mermaid svg,
+html.dark .mermaid svg {
+  background: transparent;
+}
+
+html:not(.light) .mermaid .edge-label,
+html.dark .mermaid .edge-label {
+  background-color: rgba(19, 20, 24, 0.95) !important;
+  color: #babdc4 !important;
+  border-color: #babdc4 !important;
+}
+
+/* Hide code blocks while they are being processed */
+pre:has(code.language-mermaid) {
+  display: block;
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+/* Show processed mermaid diagrams */
+.mermaid[data-processed="true"] {
+  opacity: 1;
+}
+
+/* Ensure proper spacing around larger diagrams */
+.mermaid + p,
+p + .mermaid {
+  margin-top: 3rem;
+}
+
+/* Enhanced stroke width for better visibility on larger scale */
+.mermaid .edge path {
+  stroke-width: 3px !important;
+}
+
+/* Make arrows larger */
+.mermaid .arrowheadPath {
+  stroke-width: 2px !important;
+  fill: currentColor !important;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .mermaid {
+    transform: scale(0.8);
+    margin: 2rem -10%;
+  }
+  
+  .mermaid svg {
+    min-width: 1000px;
+  }
+}
