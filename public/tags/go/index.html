@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,31 +18,31 @@
 <meta property="og:locale" content="en-us" />
 <meta name="language" content="en-us" />
 
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1314/tags/go/" title="English" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/tags/go/" title="English" />
 
 
 
-  <meta itemprop="image" content="http://localhost:1314/" />
-  <meta property="og:image" content="http://localhost:1314/" />
-  <meta name="twitter:image" content="http://localhost:1314/" />
-  <meta name="twitter:image:src" content="http://localhost:1314/" />
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
 
 
 
 
 
-<meta name="generator" content="Hugo 0.148.2">
+<meta name="generator" content="Hugo 0.154.5">
 
     
 
-    <link rel="canonical" href="http://localhost:1314/tags/go/">
+    <link rel="canonical" href="http://localhost:1313/tags/go/">
     <link href="/tags/go/index.xml" rel="alternate" type="application/rss+xml" title="N Acharya">
     <link href="/tags/go/index.xml" rel="feed" type="application/rss+xml" title="N Acharya">
     <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
-    <link href="/css/mermaid.min.a6398a391acad8c8ab525b7d5153f13f2118b2dc7288ee85f49fc0d272943a75.css" rel="stylesheet">
+    <link href="/css/mermaid.min.0ed0d8b195d6b36b3bc5c8309173195ce96729ea548404ca8d393d95f0a2133f.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
@@ -52,7 +52,7 @@
 
 
 
-<link rel="manifest" href="http://localhost:1314/site.webmanifest">
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
 
 <meta name="msapplication-config" content="/browserconfig.xml">
 <meta name="msapplication-TileColor" content="#2d89ef">
@@ -67,32 +67,88 @@
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
   
   
-  mermaid.initialize({ 
-    startOnLoad: true,
-    theme: 'dark' === 'dark' ? 'dark' : 'default',
-    securityLevel: 'loose',
-    fontFamily: 'inherit'
-  });
+  function convertMermaidCodeBlocks() {
+    
+    document.querySelectorAll('code.language-mermaid').forEach((codeBlock) => {
+      
+      const mermaidDiv = document.createElement('div');
+      mermaidDiv.classList.add('mermaid');
+      mermaidDiv.textContent = codeBlock.textContent;
+      
+      
+      const preElement = codeBlock.parentElement;
+      if (preElement && preElement.tagName === 'PRE') {
+        preElement.parentElement.replaceChild(mermaidDiv, preElement);
+      }
+    });
+  }
+
+  
+  function initializeMermaid() {
+    const theme = 'dark' === 'dark' ? 'dark' : 
+                  ('dark' === 'auto' && 
+                   window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'base';
+    
+    mermaid.initialize({ 
+      startOnLoad: false,
+      theme: theme,
+      securityLevel: 'loose',
+      fontFamily: 'Roboto, Arial, sans-serif',
+      fontSize: '24px',
+      themeVariables: {
+        fontSize: '24px',
+        fontFamily: 'Roboto, Arial, sans-serif',
+        primaryColor: theme === 'dark' ? '#2196f3' : '#1976d2',
+        primaryTextColor: '#ffffff',
+        primaryBorderColor: theme === 'dark' ? '#1565c0' : '#0d47a1',
+        lineColor: theme === 'dark' ? '#babdc4' : '#333333',
+        secondaryColor: theme === 'dark' ? '#4caf50' : '#388e3c',
+        tertiaryColor: theme === 'dark' ? '#ff9800' : '#f57c00',
+        background: 'transparent',
+        mainBkg: 'transparent',
+        secondBkg: 'transparent',
+        tertiaryBkg: 'transparent'
+      },
+      flowchart: {
+        useMaxWidth: false,
+        htmlLabels: true,
+        nodeSpacing: 80,
+        rankSpacing: 100,
+        curve: 'basis'
+      }
+    });
+  }
+
+  
+  function processMermaid() {
+    convertMermaidCodeBlocks();
+    mermaid.run();
+  }
+
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeMermaid();
+      processMermaid();
+    });
+  } else {
+    initializeMermaid();
+    processMermaid();
+  }
 
   
   if ('dark' === 'auto') {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const updateTheme = (e) => {
-      mermaid.initialize({ 
-        startOnLoad: true,
-        theme: e.matches ? 'dark' : 'default',
-        securityLevel: 'loose',
-        fontFamily: 'inherit'
-      });
+      initializeMermaid();
       
-      document.querySelectorAll('.mermaid').forEach((element, index) => {
+      document.querySelectorAll('.mermaid').forEach((element) => {
         element.removeAttribute('data-processed');
       });
-      mermaid.init();
+      mermaid.run();
     };
     
     mediaQuery.addListener(updateTheme);
-    updateTheme(mediaQuery);
   }
 </script></head>
 <body data-theme = "dark" class="notransition">
@@ -101,7 +157,7 @@
 
 <div class="navbar" role="navigation">
     <nav class="menu" aria-label="Main Navigation">
-        <a href="http://localhost:1314/" class="logo">
+        <a href="http://localhost:1313/" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
 stroke-linejoin="round" class="feather feather-home">
@@ -236,7 +292,7 @@ stroke-linejoin="round" class="feather feather-home">
 </a>
 </div>
     <small class="footer_copyright">
-        © 2025 N Acharya.
+        © 2026 N Acharya.
         Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
     </small>
 </footer><a href="#" title="Go to top" id="totop">
@@ -268,7 +324,7 @@ stroke-linejoin="round" class="feather feather-home">
 
 
     
-    <script async src="http://localhost:1314/js/main.js" ></script>
+    <script async src="http://localhost:1313/js/main.js" ></script>
 
     
 

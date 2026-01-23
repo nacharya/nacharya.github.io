@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,14 +18,14 @@
 <meta property="og:locale" content="en-us" />
 <meta name="language" content="en-us" />
 
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1314/posts/genericsgo/" title="English" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/genericsgo/" title="English" />
 
 
 
-  <meta itemprop="image" content="http://localhost:1314/" />
-  <meta property="og:image" content="http://localhost:1314/" />
-  <meta name="twitter:image" content="http://localhost:1314/" />
-  <meta name="twitter:image:src" content="http://localhost:1314/" />
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
 
 
 
@@ -68,16 +68,16 @@
     </script>
 
 
-<meta name="generator" content="Hugo 0.148.2">
+<meta name="generator" content="Hugo 0.154.5">
 
     
 
-    <link rel="canonical" href="http://localhost:1314/posts/genericsgo/">
+    <link rel="canonical" href="http://localhost:1313/posts/genericsgo/">
     <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
-    <link href="/css/mermaid.min.9ccf0fac2cbba6fabf39c855f755f7d585028e74488c3aece08e382577f83132.css" rel="stylesheet">
+    <link href="/css/mermaid.min.0ed0d8b195d6b36b3bc5c8309173195ce96729ea548404ca8d393d95f0a2133f.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
@@ -87,7 +87,7 @@
 
 
 
-<link rel="manifest" href="http://localhost:1314/site.webmanifest">
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
 
 <meta name="msapplication-config" content="/browserconfig.xml">
 <meta name="msapplication-TileColor" content="#2d89ef">
@@ -192,7 +192,7 @@
 
 <div class="navbar" role="navigation">
     <nav class="menu" aria-label="Main Navigation">
-        <a href="http://localhost:1314/" class="logo">
+        <a href="http://localhost:1313/" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
 stroke-linejoin="round" class="feather feather-home">
@@ -317,10 +317,10 @@ The Golang team is hard at work on Golang 1.18, which will be released in Februa
 <h3 id="playing-with-generics-in-go">Playing with Generics in Go</h3>
 <p>It is always fun to look at simple cases of generics and understand how to utilize the generics.
 Here we start defining a collection of of some <code>type</code> of elements and call it a type <code>MArray</code> ( My Array )</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nf">MArray</span><span class="p">(</span><span class="kd">type</span> <span class="nx">T</span><span class="p">)</span> <span class="kd">struct</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">things</span> <span class="p">[]</span><span class="nx">T</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>So <code>MArray</code> is a collection of things of <code>type</code> T. Here &ldquo;T&rdquo; is the completely generic <code>type</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nf">MArray</span><span class="p">(</span><span class="kd">type</span><span class="w"> </span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">things</span><span class="w"> </span><span class="p">[]</span><span class="nx">T</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>So <code>MArray</code> is a collection of things of <code>type</code> T. Here &ldquo;T&rdquo; is the completely generic <code>type</code></p>
 <p>Let&rsquo;s say here is a list of methods we want to write on this generic <code>Marray</code></p>
 <ul>
 <li><ins> PushBack </ins> : Add a things into the Array</li>
@@ -333,47 +333,47 @@ Here we start defining a collection of of some <code>type</code> of elements and
 <h4 id="pushback--append">PushBack &amp; Append</h4>
 <p>Here is a function for the <code>MArray</code> type struct that has one of the T as input and
 it appends it into the Array</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">this</span> <span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span> <span class="nf">PushBack</span><span class="p">(</span><span class="nx">e</span> <span class="nx">T</span><span class="p">)</span> <span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">this</span><span class="p">.</span><span class="nx">things</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">this</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">this</span> <span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span> <span class="nf">Append</span><span class="p">(</span><span class="nx">e</span> <span class="nx">T</span><span class="p">)</span> <span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">this</span><span class="p">.</span><span class="nx">things</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">this</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h4 id="getitem--removeitem">GetItem &amp; RemoveItem</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">this</span><span class="w"> </span><span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span><span class="w"> </span><span class="nf">PushBack</span><span class="p">(</span><span class="nx">e</span><span class="w"> </span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">this</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">this</span><span class="w"> </span><span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span><span class="w"> </span><span class="nf">Append</span><span class="p">(</span><span class="nx">e</span><span class="w"> </span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">this</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h4 id="getitem--removeitem">GetItem &amp; RemoveItem</h4>
 <p>Retrieve the nth element in the Array specified by <code>i</code>
 Returns the element in the Array of type <code>T</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">this</span> <span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span> <span class="nf">GetItem</span><span class="p">(</span><span class="nx">i</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">T</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Let&rsquo;s get things interesting by removing an element from the Array</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">this</span><span class="w"> </span><span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span><span class="w"> </span><span class="nf">GetItem</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="nx">T</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Let&rsquo;s get things interesting by removing an element from the Array</p>
 <p>Remove the nth element of the Array. This example does not care much about ordering,
 it is an approach speed of removal is more important than order</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">this</span> <span class="o">*</span><span class="nf">Marray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span> <span class="nf">RemoveItem</span><span class="p">(</span><span class="nx">i</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">this</span><span class="p">.</span><span class="nx">things</span> <span class="p">=</span> <span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">this</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h4 id="size--map">Size &amp; Map</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">this</span><span class="w"> </span><span class="o">*</span><span class="nf">Marray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span><span class="w"> </span><span class="nf">RemoveItem</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">this</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h4 id="size--map">Size &amp; Map</h4>
 <p>Let&rsquo;s retrieve the length of the Array with the <code>Size</code> function</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">this</span> <span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span> <span class="nf">Size</span><span class="p">()</span> <span class="kt">int</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Now let&rsquo;s implement a simple <code>Map</code> function
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">this</span><span class="w"> </span><span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">))</span><span class="w"> </span><span class="nf">Size</span><span class="p">()</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">this</span><span class="p">.</span><span class="nx">things</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Now let&rsquo;s implement a simple <code>Map</code> function
 It takes the <code>MArray</code> , a function to apply, then it applies the function and
 returns a <code>MArray</code> resulted after applying the function to each element of MArray</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">Map</span><span class="p">(</span><span class="kd">type</span> <span class="nx">F</span><span class="p">,</span> <span class="nx">T</span><span class="p">)(</span><span class="nx">array</span> <span class="nf">MArray</span><span class="p">(</span><span class="nx">F</span><span class="p">),</span> <span class="nx">f</span> <span class="kd">func</span><span class="p">(</span><span class="nx">F</span><span class="p">)</span> <span class="nx">T</span><span class="p">)</span> <span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">retlist</span> <span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nf">Size</span><span class="p">();</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">el</span> <span class="o">:=</span> <span class="nx">array</span><span class="p">.</span><span class="nf">GetItem</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">retlist</span><span class="p">.</span><span class="nf">PushBack</span><span class="p">(</span><span class="nf">f</span><span class="p">(</span><span class="nx">el</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">&amp;</span><span class="nx">res</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="conclusions">Conclusions</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">Map</span><span class="p">(</span><span class="kd">type</span><span class="w"> </span><span class="nx">F</span><span class="p">,</span><span class="w"> </span><span class="nx">T</span><span class="p">)(</span><span class="nx">array</span><span class="w"> </span><span class="nf">MArray</span><span class="p">(</span><span class="nx">F</span><span class="p">),</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">F</span><span class="p">)</span><span class="w"> </span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">retlist</span><span class="w"> </span><span class="nf">MArray</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">array</span><span class="p">.</span><span class="nf">Size</span><span class="p">();</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">el</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">array</span><span class="p">.</span><span class="nf">GetItem</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">retlist</span><span class="p">.</span><span class="nf">PushBack</span><span class="p">(</span><span class="nf">f</span><span class="p">(</span><span class="nx">el</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">res</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="conclusions">Conclusions</h3>
 <ul>
 <li>
 <p>If you are a golang developer, you will be able to use Generics soon.
@@ -425,7 +425,7 @@ efficient. Generics introduces a trade off but keeps the simplicity.</p>
 </a>
 </div>
     <small class="footer_copyright">
-        © 2025 N Acharya.
+        © 2026 N Acharya.
         Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
     </small>
 </footer><a href="#" title="Go to top" id="totop">
@@ -457,7 +457,7 @@ efficient. Generics introduces a trade off but keeps the simplicity.</p>
 
 
     
-    <script async src="http://localhost:1314/js/main.js" ></script>
+    <script async src="http://localhost:1313/js/main.js" ></script>
 
     
 
