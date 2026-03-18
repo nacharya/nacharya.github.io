@@ -1,0 +1,8 @@
+languageName = "English"
+languageCode = "en"
+weight = 1
+title = "N Acharya"
+contentDir = "content/en"
+
+[params]
+  description = "Products & Architecture -- Cloud, Data Engineering, Data Science & AI"

@@ -1,0 +1,8 @@
+{{/* Load Mermaid.js for pages using code-fence mermaid blocks (mermaid = true in front matter) */}}
+{{ if .Params.mermaid }}
+  {{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
+  {{ $mermaidConfig := resources.Get "js/mermaid.js" }}
+  {{ $mermaidConfig = $mermaidConfig | resources.Minify }}
+  {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" src="{{ $mermaidJS.RelPermalink }}" integrity="{{ $mermaidJS.Data.Integrity }}"></script>
+{{ end }}

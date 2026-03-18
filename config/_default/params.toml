@@ -1,0 +1,59 @@
+# Google AdSense — set your publisher ID here (format: ca-pub-XXXXXXXXXXXXXXXX)
+# Get this from https://adsense.google.com → Account → Account information
+google_adsense = "ca-pub-6776231617194991"
+
+colorScheme = "terminal"
+defaultAppearance = "dark"
+autoSwitchAppearance = false
+
+enableSearch = true
+enableCodeCopy = true
+
+mainSections = ["posts"]
+recentLimit = 5
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 5
+  showMoreLink = true
+  showMoreLinkDest = "/posts"
+
+[author]
+  name = "N Acharya"
+  image = "nacharya.jpg"
+  headline = "Products & Architecture"
+  bio = "Cloud, Data Engineering, Data Science & AI"
+  links = [
+    { github = "https://github.com/nacharya" },
+    { twitter = "https://twitter.com" },
+    { email = "mailto:nabin.acharya@gmail.com" },
+  ]
+
+[article]
+  showDate = true
+  showDateUpdated = false
+  showAuthor = true
+  showReadingTime = true
+  showWordCount = false
+  showTableOfContents = true
+  showTaxonomies = false
+  showEdit = false
+  seriesOpened = false
+
+[list]
+  showSummary = true
+  showViews = false
+  showLikes = false
+  groupByYear = true
+  cardView = false
+
+[sitemap]
+  excludedKinds = []
+
+[taxonomy]
+  showTermCount = true
+  showHero = false
+
+[term]
+  showHero = false

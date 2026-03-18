@@ -13,6 +13,7 @@ categories = [
     "syntax",
 ]
 series = ["Themes Guide"]
+series_order = 1
 aliases = ["migrate-from-jekyl"]
 +++
 
