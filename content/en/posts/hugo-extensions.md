@@ -3,7 +3,6 @@ title = "Math, Emoji and Diagrams in Hugo"
 date = "2026-03-20"
 description = "Working examples of KaTeX math typesetting, emoji shortcodes, and Mermaid diagrams in Hugo with the Blowfish theme."
 tags = ["markdown", "math", "mermaid", "emoji"]
-math = true
 +++
 
 A practical reference for three content extensions that go beyond basic Markdown: mathematical notation via KaTeX, emoji shortcodes, and Mermaid diagrams.
@@ -13,7 +12,9 @@ A practical reference for three content extensions that go beyond basic Markdown
 
 ## Math Typesetting with KaTeX
 
-Enable math on any page by adding `math = true` to the front matter. Hugo uses [KaTeX](https://katex.org/) for rendering.
+{{< katex >}}
+
+Add `{{</* katex */>}}` once anywhere on the page to load the KaTeX library. Hugo uses [KaTeX](https://katex.org/) for rendering.
 
 #### Inline math
 
