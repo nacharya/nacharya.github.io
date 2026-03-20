@@ -147,3 +147,19 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+## Rich Embeds
+
+Hugo ships with built-in shortcodes for embedding rich media content.
+
+#### YouTube
+
+{{< youtube ZJthWmvUzzc >}}
+
+#### X (Twitter)
+
+{{< x user="SanDiegoZoo" id="1453110110599868418" >}}
+
+#### Vimeo
+
+{{< vimeo_simple 48912912 >}}
