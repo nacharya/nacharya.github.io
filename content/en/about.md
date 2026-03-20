@@ -1,74 +1,55 @@
 ---
 title: "About"
 date: 2021-11-27T18:19:10-08:00
-authon: "nacharya"
 draft: false
 ---
 
-<span style="color:purple">
+## Data, Processing and Learning
 
-_Nabin's Playground_
+Lots of data is easy to collect — the hard part is making it useful. Data has to be persisted, processed to find what is relevant, and pruned of what is not. Reducing the noise reduces the cost to store and mine it. Data arrives in many formats and through many channels in the Cloud, and that continuous growth of information is what makes this space endlessly interesting.
 
-</span>
+I am drawn to the full arc: storage, processing, mining, and building the context layers that make learning from data — through AI and ML — feel seamless rather than bolted on.
 
-### Data, Processing and Learning
+{{< figure src="data-deluge.jpeg" alt="Data Deluge" >}}
 
-Lots of data is easy to collect. It has to be persisted somewhere. Data has to be processed to find out what is relevant. If irrelevant data is thrown away, it reduces your cost to store it, reduces the cost to mine it. Data come it many many different formats and in many different channels in the Cloud. Continuous growth of information makes things interesting and it does make you look at Technology in different curious ways.
+---
 
-I am fond of data as it is persisted , mined and learned from. This includes Data for Storage, Processing, Mining and building Contexts so Learning from data using AI/ML techniques becomes seamless.
+## Technology and Products
 
-<img src="data-deluge.jpeg" width="600" />
+Technology is now woven into every part of life — whether you are building enterprise platforms or consumer products, it shapes culture, efficiency, relationships, creativity, and the products themselves. I have spent my career at that intersection, working across cloud infrastructure, data engineering, and applied AI to build things that are actually useful.
 
+---
 
-### Technology and Products
+## A Better World
 
-The year is 2024. We have Technology everywhere in our lives. Whether you are making Enterprise products or Consumer oriented products, Technology is important in all aspects.
-Technology affects the culture, efficiency , relationships, creativity and products of a business
+> *We have always held to the hope, the belief, the conviction that there is a better life, a better world, beyond the horizon.*
+> — Franklin D. Roosevelt
 
-### Create a better world for Humanity
+> *With realization of one's own potential and self-confidence in one's ability, one can build a better world for everyone.*
+> — Dalai Lama
 
-<span style="color:yellow">
+A personal belief: it is best to spend time making this world a better place for every human. Life is short. Make it count.
 
-_We have always held to the hope, the belief, the conviction that there is a better life, a better world, beyond the horizon. -Franklin D Roosevelt_
+---
 
-</span>
+## Contact
 
-<span style="color:white">
-
-... and ...
-
-</span>
-
-<span style="color:yellow">
-
-_With realization of one's own potential and self-confidence in one's ability, one can build a better world for everyone. -Dalai Lama_
-
-</span>
-
-<span style="color:white">
-A personal belief ..... It is best to spend time to make this world a better place for every human. Life is short. Make it count.
-</span>
-
-### Contact
-
-<span style="color:white">
-I Live in SF Bay Area and like to hike around the hills & play golf on weekends.
+I live in the SF Bay Area and spend weekends hiking the hills or playing golf.
 
 [nabin.acharya@gmail.com](mailto:nabin.acharya@gmail.com)
 
-Photos from around the Bay
+---
+
+## Around the Bay
 
 ### San Jose & [Los Gatos](https://www.losgatosca.gov/515/About-Los-Gatos)
-<img src="san-jose.jpg" width="600" />
+{{< figure src="san-jose.jpg" alt="San Jose" >}}
 
-### Sierra Trail - Milpitas
-<img src="SierraTrail.jpg" width="600" />
+### Sierra Trail — Milpitas
+{{< figure src="SierraTrail.jpg" alt="Sierra Trail" >}}
 
-### Tilden Park - Berkeley
-<img src="tilden-par3.jpg" width="600" />
+### Tilden Park — Berkeley
+{{< figure src="tilden-par3.jpg" alt="Tilden Park" >}}
 
-### Kite Surfing -- Pacific Coast
-<img src="PacificKiteSurf.jpg" width="600" />
-
-</span>
-
+### Kite Surfing — Pacific Coast
+{{< figure src="PacificKiteSurf.jpg" alt="Kite Surfing" >}}
