@@ -119,52 +119,40 @@ we align system architecture with the realities of modern storage hardware. NVMe
 ## Architecture Diagram (Mermaid)
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'24px', 'fontFamily':'Roboto, Arial, sans-serif', 'primaryColor':'#ffffff', 'primaryTextColor':'#000000', 'primaryBorderColor':'#333333', 'lineColor':'#333333'}, 'flowchart': {'nodeSpacing': 80, 'rankSpacing': 100}}}%%
 flowchart LR
-  %% Top-level: Client apps use a KV service
-  A["🖥️ Client Apps<br/>REST/gRPC APIs"] --> B["⚡ KV Service / API<br/>Request Router"]
+  A["Client Apps<br/>REST/gRPC APIs"] --> B["KV Service / API<br/>Request Router"]
 
-  %% Metadata path
-  B --> M[("💾 LMDB<br/>Metadata Catalog<br/>Keys & References")]
+  B --> M[("LMDB<br/>Metadata Catalog<br/>Keys & References")]
 
-  %% Value routing: small vs. large
-  B -->|"🔍 value lookup"| R{"📊 Value Type?<br/>Size Check"}
-  R -->|"📝 small/metadata-only"| M
-  R -->|"🗂️ large value"| SD["🔌 Scylla Client/Driver<br/>Distributed Access"]
+  B -->|"value lookup"| R{"Value Type?<br/>Size Check"}
+  R -->|"small / metadata"| M
+  R -->|"large value"| SD["Scylla Client/Driver<br/>Distributed Access"]
 
-  %% Local I/O paths on the KV host
-  subgraph LIO["🏠 Local NVMe I/O on KV Host"]
+  subgraph LIO["Local NVMe I/O on KV Host"]
     direction TB
-    UR["⚙️ io_uring<br/>Kernel Async I/O<br/>High Performance"] --> NV[("💽 Local NVMe SSDs<br/>Ultra-Low Latency<br/>Multi-GB/s")]
-    SP["🚀 SPDK NVMe<br/>User-Space Polled<br/>Microsecond Access"] --> NV
+    UR["io_uring<br/>Kernel Async I/O"] --> NV[("Local NVMe SSDs<br/>Ultra-Low Latency")]
+    SP["SPDK NVMe<br/>User-Space Polled"] --> NV
   end
 
-  %% Scylla cluster path for large values
-  SD --> SC[["🌐 Scylla Cluster<br/>Shard-per-Core<br/>Distributed Storage"]]
+  SD --> SC[["Scylla Cluster<br/>Shard-per-Core<br/>Distributed Storage"]]
 
-  %% Optional disaggregation over SPDK LAN (NVMe-oF)
-  subgraph NET["🌍 SPDK LAN / NVMe-oF Fabric"]
+  subgraph NET["SPDK LAN / NVMe-oF Fabric"]
     direction TB
-    INI["📡 DPDK + NVMe-oF<br/>Initiator<br/>Network Acceleration"] --- TGT["🎯 SPDK NVMe-oF<br/>Target<br/>Remote Access"]
+    INI["DPDK + NVMe-oF<br/>Initiator"] --- TGT["SPDK NVMe-oF<br/>Target"]
   end
 
-  %% Remote NVMe target
-  TGT --> RNV[("🌐 Remote NVMe SSDs<br/>Disaggregated Storage<br/>Scale-Out Capacity")]
+  TGT --> RNV[("Remote NVMe SSDs<br/>Disaggregated Storage")]
 
-  %% Wiring optional remote path
-  B -.->|"🔥 optional hot path"| INI
-  INI -.->|"🔗 block access"| RNV
+  B -.->|"optional hot path"| INI
+  INI -.->|"block access"| RNV
 
-  %% Enhanced styling with bigger fonts and larger nodes
-  classDef comp fill:#2196f3,stroke:#1565c0,stroke-width:4px,color:#ffffff,font-size:20px,font-weight:bold;
-  classDef store fill:#4caf50,stroke:#2e7d32,stroke-width:4px,color:#ffffff,font-size:20px,font-weight:bold;
-  classDef fabric fill:#ff9800,stroke:#ef6c00,stroke-width:4px,color:#ffffff,font-size:20px,font-weight:bold;
-  classDef decision fill:#9c27b0,stroke:#6a1b9a,stroke-width:4px,color:#ffffff,font-size:20px,font-weight:bold;
+  classDef comp fill:#2196f3,stroke:#1565c0,stroke-width:3px,color:#ffffff
+  classDef store fill:#4caf50,stroke:#2e7d32,stroke-width:3px,color:#ffffff
+  classDef decision fill:#9c27b0,stroke:#6a1b9a,stroke-width:3px,color:#ffffff
 
-  class A,B,M,SD,UR,SP,INI,TGT,SC comp;
-  class NV,RNV store;
-  class NET,LIO fabric;
-  class R decision;
+  class A,B,M,SD,UR,SP,INI,TGT,SC comp
+  class NV,RNV store
+  class R decision
 ```
 
 **Legend**
