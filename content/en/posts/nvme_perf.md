@@ -4,7 +4,6 @@ description = 'Exploring the architecture of next-gen key-value stores using NVM
 keywords = ['NVMe', 'io_uring', 'ScyllaDB', 'LMDB']
 date = 2025-08-18T20:14:47-07:00
 draft = false
-mermaid = true
 +++
 
 # NVMe, Modern I/O, and Scalable Databases: Building the Next-Generation KV Stores
@@ -118,7 +117,7 @@ we align system architecture with the realities of modern storage hardware. NVMe
 
 ## Architecture Diagram (Mermaid)
 
-```mermaid
+{{< mermaid >}}
 flowchart LR
   A["Client Apps<br/>REST/gRPC APIs"] --> B["KV Service / API<br/>Request Router"]
 
@@ -153,7 +152,7 @@ flowchart LR
   class A,B,M,SD,UR,SP,INI,TGT,SC comp
   class NV,RNV store
   class R decision
-```
+{{< /mermaid >}}
 
 **Legend**
 

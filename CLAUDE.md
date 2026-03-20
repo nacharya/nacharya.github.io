@@ -39,26 +39,62 @@ Split config in `config/_default/`:
 
 ### Front Matter
 Posts use YAML (`---`) or TOML (`+++`) front matter. Set `draft: false` to publish.
-For posts with Mermaid diagrams, add `mermaid = true` to front matter — this triggers Blowfish's Mermaid.js loader via `layouts/partials/extend-head-uncached.html`.
 
 ```toml
 +++
 title = "My Post"
 date = 2026-01-23T10:00:00-08:00
 draft = false
-mermaid = true   # add when post contains ```mermaid code fences
 +++
 ```
 
-### Mermaid Diagrams
-Use standard code fences:
-````
-```mermaid
-graph TD
-  A --> B
-```
-````
-Blowfish's `{{< mermaid >}}` shortcode also works (auto-loads JS without front matter flag).
+---
 
-### CI/CD
+## Content Extensions
+
+### Mermaid Diagrams
+
+**Always use the `{{< mermaid >}}` shortcode** — Blowfish detects it via `HasShortcode` and loads the JS bundle automatically. No front matter flag needed.
+
+```
+{{</* mermaid */>}}
+flowchart LR
+  A[Start] --> B[End]
+{{</* /mermaid */>}}
+```
+
+Do **not** use code fences (` ```mermaid `). Blowfish's JS does not process code fences — only the shortcode form works reliably.
+
+Supported diagram types: `flowchart`, `sequenceDiagram`, `stateDiagram-v2`, `classDiagram`, `gitGraph`, `pie`, `erDiagram`.
+
+Avoid emojis in node labels, `%%{init:...}%%` directives, and `font-size`/`font-weight` in `classDef` — these cause parse errors in Mermaid v11.
+
+### Math (KaTeX)
+
+**Always include `{{< katex >}}`** once anywhere on the page to load the KaTeX library. Blowfish loads KaTeX via `HasShortcode "katex"` — the `math = true` front matter flag does nothing.
+
+```
+{{</* katex */>}}
+```
+
+Then use standard KaTeX notation in the content:
+
+| Type | Syntax | Example |
+|---|---|---|
+| Inline | `\\( ... \\)` | `\\( e^{i\pi} + 1 = 0 \\)` |
+| Block | `$$ ... $$` | `$$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$` |
+
+### Emoji
+
+Emoji shortcodes work globally (`enableEmoji = true` in `hugo.toml`). Use directly in Markdown:
+
+```
+:rocket:  :computer:  :gear:  :white_check_mark:  :fire:  :brain:
+```
+
+Full reference: https://www.webfx.com/tools/emoji-cheat-sheet/
+
+---
+
+## CI/CD
 GitHub Actions (`.github/workflows/hugo.yml`) builds with Hugo 0.157.0 extended and deploys to GitHub Pages on push to `master`. Uses `submodules: recursive` to fetch Blowfish.
